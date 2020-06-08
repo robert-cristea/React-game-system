@@ -1,0 +1,339 @@
+.gameDetails {
+	$self: &;
+
+	@include scroll-hide('v');
+
+	overflow-y: auto;
+	padding: $page-padding;
+	padding-top: 3.5rem;
+	min-height: 100%;
+
+	&__loading {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%);
+	}
+
+	&__cover {
+		@include aspect-ratio(2, 1, 'img');
+
+		margin-bottom: 1rem;
+		background: $bg-content;
+	}
+
+	&__info {
+		background: $bg-card;
+		padding: 4rem 5rem;
+
+		&-title {
+			font-weight: 700;
+			font-size: 2.4rem;
+			line-height: 3.2rem;
+			margin: 0;
+		}
+
+		&-section {
+			display: flex;
+			padding: 1rem 0;
+			margin-bottom: 1rem;
+			border-bottom: 0.1rem solid rgba($white, 0.1);
+
+			& > .icon {
+				height: 2rem;
+				margin-right: 1rem;
+
+				svg {
+					height: 100%;
+					fill: $main;
+				}
+			}
+		}
+
+		&-descriptor {
+			font-weight: 300;
+			font-size: 1.4rem;
+			line-height: 2rem;
+		}
+
+		&-interactable {
+			cursor: pointer;
+		}
+	}
+
+	&__genres {
+		font-weight: 500;
+		font-size: 1.4rem;
+		line-height: 2rem;
+		color: rgba($white, 0.5);
+		margin: 0 0 2.7rem;
+	}
+
+	&__genre {
+		&:not(:last-child)::after {
+			content: ',\00a0'; // NBS
+		}
+	}
+
+	&__flags {
+		height: 4.5rem;
+		display: flex;
+		margin-right: auto;
+	}
+
+	&__flag {
+		height: 100%;
+		width: auto;
+		margin-right: 0.5rem;
+	}
+
+	&__platforms {
+		height: 4.5rem;
+		display: flex;
+	}
+
+	&__platform {
+		text-align: center;
+		margin-left: 0.5rem;
+		padding: 0 0.5rem;
+
+		& > .icon {
+			height: 2.5rem;
+
+			svg {
+				height: 100%;
+				fill: rgba($white, 0.5);
+			}
+		}
+
+		&-text {
+			font-weight: 900;
+			font-size: 0.7rem;
+			line-height: 1rem;
+			color: rgba($white, 0.5);
+			margin-top: 1rem;
+			text-transform: uppercase;
+		}
+	}
+
+	&__cta {
+		position: relative;
+		overflow: hidden;
+		display: flex;
+	}
+
+	&__button {
+		$button: &;
+
+		&--overlay {
+			position: absolute;
+			left: 0;
+			top: 0;
+			transform: translateY(-100%);
+			transition: transform 0.3s ease;
+			will-change: transform;
+
+			&:hover,
+			#{$button}:hover + & {
+				transform: translateY(0);
+			}
+		}
+	}
+
+	&__price {
+		display: flex;
+		align-items: center;
+		margin-right: 4rem;
+
+		.icon {
+			height: 2.5rem;
+			margin-right: 1rem;
+			flex-shrink: 0;
+
+			svg {
+				height: 100%;
+				fill: $main;
+			}
+		}
+	}
+
+	&__amount {
+		overflow: hidden;
+
+		&--sale {
+			margin-left: 0.5rem;
+			text-decoration: line-through;
+			opacity: 0.5;
+		}
+
+		&-tokens {
+			font-size: 3.2rem;
+			font-weight: 700;
+			line-height: 4.4rem;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+
+		&-currency {
+			font-size: 1.2rem;
+			font-weight: 500;
+			line-height: 1.5rem;
+			color: rgba($white, 0.5);
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+	}
+
+	&__separator {
+		margin: 2rem 0;
+		border-bottom: 0.1rem solid rgba($white, 0.1);
+	}
+
+	&__myRating {
+		display: flex;
+		align-items: center;
+		margin: 2rem 0;
+
+		&-text {
+			font-weight: 300;
+			font-size: 1.4rem;
+			line-height: 2rem;
+			margin-right: 1.5rem;
+		}
+
+		&-stars {
+			display: flex;
+
+			& > .icon {
+				height: 2rem;
+				cursor: pointer;
+
+				&:not(:last-child) {
+					margin-right: 1rem;
+				}
+
+				svg {
+					height: 100%;
+					fill: $main;
+				}
+			}
+		}
+	}
+
+	&__description {
+		&-title {
+			font-weight: 500;
+			font-size: 1.6rem;
+			line-height: 2.2rem;
+			letter-spacing: 0.2rem;
+			margin-bottom: 2rem;
+		}
+
+		&-content {
+			font-weight: 300;
+			font-size: 1.5rem;
+			line-height: 2rem;
+
+			p {
+				margin: 0;
+
+				&:not(:last-child) {
+					margin-bottom: 2rem;
+				}
+			}
+		}
+	}
+
+	&__medias {
+		margin-top: 5rem;
+
+		&-header {
+			display: flex;
+			margin-top: 0;
+			margin-bottom: 3rem;
+
+			& > .icon {
+				height: 2.6rem;
+				margin-right: 1rem;
+
+				svg {
+					height: 100%;
+					fill: $main;
+				}
+			}
+		}
+
+		&-title {
+			font-weight: 500;
+			font-size: 2.4rem;
+			line-height: 3.2rem;
+			letter-spacing: 0.3rem;
+			margin: 0;
+		}
+	}
+
+	&__media {
+		&:not(:last-child) {
+			margin-bottom: 4rem;
+		}
+
+		&-content {
+			position: relative;
+			font-size: 0;
+
+			img {
+				width: 100%;
+			}
+		}
+
+		&-details {
+			background: $bg-card;
+			padding: 1.5rem 2rem;
+		}
+
+		&-title {
+			font-weight: 700;
+			font-size: 1.8rem;
+			line-height: 2.5rem;
+		}
+
+		&-text {
+			font-weight: 300;
+			font-size: 1.6rem;
+			line-height: 2.2rem;
+			margin-bottom: 0.5rem;
+			color: rgba($white, 0.5);
+		}
+
+		&-type {
+			font-weight: 500;
+			font-size: 1.4rem;
+			line-height: 2rem;
+			color: rgba($white, 0.5);
+		}
+	}
+
+	&__back-button {
+		display: flex;
+		align-items: center;
+		margin-bottom: 2rem;
+		cursor: pointer;
+
+		font-weight: 500;
+		font-size: 1.4rem;
+		line-height: 2rem;
+		color: $white;
+
+		& > .icon {
+			height: 2rem;
+			margin-right: 1rem;
+
+			svg {
+				height: 100%;
+				fill: $white;
+			}
+		}
+	}
+}

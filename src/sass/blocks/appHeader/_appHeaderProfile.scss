@@ -1,0 +1,84 @@
+.appHeaderProfile {
+	display: flex;
+	align-items: center;
+	background: transparent;
+	cursor: pointer;
+
+	&__avatar {
+		height: 4.4rem;
+		width: 4.4rem;
+	}
+
+	&__info {
+		margin: 0 1rem 0 1.5rem;
+		max-width: 25rem;
+		text-align: left;
+
+		&-name {
+			font-size: 1.6rem;
+			font-weight: 700;
+			line-height: 2.2rem;
+
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+
+		&-username {
+			font-size: 1.2rem;
+			font-weight: 500;
+			line-height: 1.6rem;
+			color: rgba($white, 0.5);
+
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+	}
+
+	.icon {
+		height: 2.2rem;
+		width: 1.4rem;
+		display: flex;
+		align-items: center;
+
+		svg {
+			height: auto;
+			width: 100%;
+			fill: $white;
+		}
+	}
+
+	&__icon {
+		transition: transform 0.5s ease;
+
+		&--active {
+			transform: rotateX(0.5turn);
+		}
+	}
+
+	&__dropdown {
+		min-width: 20rem;
+
+		&-item {
+			width: 100%;
+			text-align: left;
+			background: none;
+			font-size: 1.4rem;
+			font-weight: 300;
+			line-height: 1.8rem;
+			color: $white;
+			transition: opacity 0.3s ease;
+			opacity: 0.5;
+			cursor: pointer;
+
+			&:hover {
+				opacity: 1;
+			}
+
+			&:not(:last-child) {
+				margin-bottom: 1.5rem;
+			}
+		}
+	}
+}

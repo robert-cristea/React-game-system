@@ -1,0 +1,16 @@
+.inlineTokenAmount {
+	display: inline-block;
+	font-weight: 700;
+
+	.icon {
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 0.33em;
+		height: 1em;
+	}
+
+	svg {
+		height: 100%;
+		fill: $main;
+	}
+}

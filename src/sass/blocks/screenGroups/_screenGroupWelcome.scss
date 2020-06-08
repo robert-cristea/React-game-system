@@ -1,0 +1,23 @@
+.screenGroupWelcome {
+	@include scroll-hide('v');
+
+	background: $bg-page;
+	height: 100vh;
+	overflow-y: scroll;
+
+	&__wrap {
+		min-height: 100vh;
+		padding: 10vh 0;
+		display: flex;
+		flex-shrink: 0;
+		align-items: center;
+	}
+
+	&__content {
+		background: $bg-content;
+		border-radius: 1rem;
+		margin: 0 auto;
+		padding: 5rem 5rem 3rem;
+		flex-grow: 1;
+	}
+}

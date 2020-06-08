@@ -1,0 +1,45 @@
+.messageAttachment {
+	&__content {
+		border-radius: 0.3rem;
+		border: 1px solid $bg-card;
+		overflow: hidden;
+		position: relative;
+	}
+
+	&__media {
+		position: relative;
+		z-index: 1;
+	}
+
+	&__image {
+		display: block;
+		max-width: 100%;
+	}
+
+	&__download {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		cursor: pointer;
+		z-index: 2;
+		display: block;
+
+		.icon {
+			width: 2rem;
+		}
+
+		svg {
+			fill: $main;
+			width: 100%;
+		}
+	}
+
+	&__datetime {
+		position: absolute;
+		font-size: 1rem;
+		opacity: 0.5;
+		left: 1.1rem;
+		bottom: 0.3rem;
+		z-index: 2;
+	}
+}

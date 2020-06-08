@@ -1,0 +1,64 @@
+{
+  "env": {
+    "browser": true
+  },
+  "parser": "babel-eslint",
+  "extends": [
+    "airbnb",
+    "prettier",
+    "prettier/react"
+  ],
+  "plugins": [
+    "prettier",
+    "class-property"
+  ],
+  "rules": {
+    "no-tabs": "off",
+    "no-plusplus": "off",
+    "import/extensions": [
+      "error",
+      "never"
+    ],
+    "indent": [
+      "error",
+      "tab",
+      { "SwitchCase": 1 }
+    ],
+    "linebreak-style": ["error", "unix"],
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "ignore"
+      }
+    ],
+    "class-methods-use-this": "off",
+    "react/jsx-indent-props": ["error", "tab"],
+    "react/jsx-indent": ["error", "tab"],
+    "react/sort-comp": [
+      "error",
+      {
+        "order": [
+          "static-methods",
+          "instance-variables",
+          "lifecycle",
+          "everything-else",
+          "render"
+        ]
+      }
+    ],
+    "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/label-has-for": "off",
+    "no-param-reassign": [
+      "error",
+      { "props": false }
+    ],
+    "react/forbid-prop-types": "off",
+    "prefer-destructuring": "off",
+    "react/no-unescaped-entities": "off"
+  }
+}

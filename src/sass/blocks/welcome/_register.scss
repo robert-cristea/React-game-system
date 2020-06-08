@@ -1,0 +1,16 @@
+.register {
+	&__footer {
+		max-width: 28rem;
+		text-align: center;
+	}
+
+	&__submit {
+		margin: 1.5rem 0;
+	}
+
+	&__eula {
+		text-align: center;
+		margin-top: 2rem;
+		margin-bottom: 1.5rem;
+	}
+}

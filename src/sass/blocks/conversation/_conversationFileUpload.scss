@@ -1,0 +1,113 @@
+.conversationFileUpload {
+	box-sizing: border-box;
+	border: 2px solid transparent;
+	padding: 0 15px;
+	background-color: rgba($bg-content, 0.5);
+	color: rgba($white, 0.4);
+	font-style: italic;
+	line-height: 1.5em;
+	font-size: 1.4rem;
+	font-weight: 300;
+	display: flex;
+	align-items: center;
+	height: 60px;
+	position: relative;
+
+	&--error,
+	&--uploading {
+		font-style: normal;
+		color: rgba($white, 0.9);
+		background-color: $bg-content;
+	}
+
+	&--error {
+		border-color: $accent;
+	}
+
+	&__remove {
+		position: absolute;
+		top: 6px;
+		right: 5px;
+		cursor: pointer;
+		opacity: 0.4;
+		transition: opacity 0.1s;
+
+		&:hover {
+			opacity: 1;
+		}
+
+		.icon {
+			width: 16px;
+		}
+
+		svg {
+			fill: rgba($white, 0.9);
+		}
+	}
+
+	&__loading {
+		display: none;
+		opacity: 0.7;
+
+		.conversationFileUpload--uploading & {
+			display: block;
+			margin-right: 15px;
+		}
+	}
+
+	&__meta {
+		flex: 1;
+		overflow: hidden;
+	}
+
+	&__name {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	&__size {
+		font-size: 1rem;
+		line-height: 1em;
+		opacity: 0.5;
+	}
+
+	&__progress {
+		$c1: rgba($white, 0.1);
+		$c2: rgba($white, 0.2);
+		height: 5px;
+		border-radius: 3px;
+		margin-top: 5px;
+		overflow: hidden;
+
+		&::before {
+			content: '';
+			display: block;
+			background: repeating-linear-gradient(
+				135deg,
+				$c1,
+				$c1 10px,
+				$c2 10px,
+				$c2 20px
+			);
+			height: 100%;
+			width: calc(100% + 30px);
+			animation: progress 0.6s infinite linear;
+		}
+	}
+
+	&__error {
+		font-style: italic;
+		color: $accent;
+	}
+}
+
+@keyframes progress {
+	0% {
+		transform: translateX(-27px);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}

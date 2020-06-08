@@ -1,0 +1,95 @@
+.tagsInput {
+	$self: &;
+
+	-webkit-appearance: none;
+	width: 100%;
+	border: 0.2rem solid $bg-card;
+	border-radius: 0.5rem;
+	padding: 1rem;
+
+	display: flex;
+	flex-wrap: wrap;
+
+	&__inputContainer {
+		position: relative;
+	}
+
+	&__search {
+		height: 2.5rem;
+		padding: 0 3.5rem 0 1rem;
+		margin: 0;
+		box-sizing: border-box;
+
+		border: none;
+		background-color: transparent;
+		border-radius: 0;
+
+		color: $white;
+		font-weight: 300;
+		font-size: 1.4rem;
+		line-height: 1.6rem;
+	}
+
+	&__clear {
+		position: absolute;
+		top: 0.5rem;
+		right: 1rem;
+		cursor: pointer;
+
+		.icon {
+			height: 1.6rem;
+		}
+
+		svg {
+			height: 100%;
+			fill: $white;
+		}
+	}
+
+	&__tag {
+		background-color: $bg-card;
+		border-radius: 1.75rem;
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		max-width: 100%;
+		overflow: hidden;
+
+		height: 2.5rem;
+		margin-right: 0.5rem;
+		margin-bottom: 0.5rem;
+
+		overflow: hidden;
+		cursor: default;
+	}
+
+	&__tagLabel {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+
+		font-weight: 300;
+		font-size: 1.4rem;
+		line-height: 1.6rem;
+
+		padding: 0 1rem;
+		color: rgba($white, 0.5);
+	}
+
+	&__tagRemove {
+		padding-right: 1rem;
+		cursor: pointer;
+
+		.icon {
+			height: 0.7rem;
+
+			svg {
+				height: 100%;
+				fill: $white;
+				vertical-align: top;
+			}
+		}
+	}
+}

@@ -1,0 +1,88 @@
+.checkout {
+	@include scroll-hide('v');
+
+	margin: 0 auto;
+	padding: 4rem 2rem;
+	max-width: 120rem;
+	width: 100%;
+	overflow-y: auto;
+	min-height: 100%;
+
+	&__title {
+		font-size: 3.2rem;
+		font-weight: 500;
+		line-height: #{(4.4/3.2)};
+		letter-spacing: 0.4rem;
+		margin-top: 0;
+		margin-bottom: 3rem;
+		text-transform: uppercase;
+	}
+
+	&__content {
+		background: $bg-content;
+		padding: 6.6rem 9rem;
+	}
+
+	&__cols {
+		display: flex;
+	}
+
+	&__items {
+		flex: 1;
+	}
+
+	&__payment {
+		flex: 0 0 26rem;
+		padding-left: 4.9rem;
+		margin-left: 4.9rem;
+		position: relative;
+		box-sizing: content-box;
+
+		&::before {
+			position: absolute;
+			content: '';
+			top: 0;
+			left: 0;
+			width: 1px;
+			background-color: rgba($white, 0.1);
+			height: 100%;
+			max-height: 31.3rem;
+		}
+	}
+
+	&__sectionHeader {
+		margin-bottom: 3.2rem;
+	}
+
+	&__sectionTitle {
+		font-size: 2.4rem;
+		font-weight: 500;
+		text-transform: uppercase;
+		letter-spacing: 0.3rem;
+		line-height: #{(3.3/2.4)};
+		display: flex;
+
+		.icon {
+			height: 2.6rem;
+			margin-right: 1rem;
+		}
+
+		svg {
+			height: 100%;
+			fill: $main;
+		}
+	}
+
+	&__loading {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__emptyItems {
+		text-align: center;
+
+		p {
+			margin-bottom: 2rem;
+		}
+	}
+}

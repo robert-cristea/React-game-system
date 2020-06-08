@@ -1,0 +1,77 @@
+.orderStatus {
+	$self: &;
+
+	background: $bg-page;
+	padding: 2.5rem 3rem;
+	display: flex;
+	flex-wrap: nowrap;
+
+	&--small {
+		padding: 2.2rem 1.9rem;
+	}
+
+	&__title {
+		font-weight: 500;
+		font-size: 1.4rem;
+		line-height: 1.9rem;
+		letter-spacing: 0.2rem;
+		text-transform: uppercase;
+		margin: 0;
+		margin-bottom: 1rem;
+
+		#{$self}--small & {
+			font-size: 1.3rem;
+			line-height: 1.8rem;
+			letter-spacing: 0.15rem;
+		}
+	}
+
+	&__text {
+		font-weight: 300;
+		font-size: 1.4rem;
+		line-height: 1.9rem;
+		margin: 0;
+		color: $white;
+		opacity: 0.5;
+
+		#{$self}--small & {
+			font-size: 1.2rem;
+			line-height: 1.6rem;
+		}
+	}
+
+	&__icon {
+		$icon: &;
+
+		margin-right: 2rem;
+
+		#{$self}--small & {
+			margin-right: 1.2rem;
+		}
+
+		& > .icon {
+			height: 4rem;
+
+			#{$self}--small & {
+				height: 2rem;
+			}
+
+			svg {
+				height: 100%;
+				fill: $bg-content;
+			}
+		}
+
+		&--success .icon svg {
+			fill: $success;
+		}
+
+		&--processing .icon svg {
+			fill: $progress;
+		}
+
+		&--declined .icon svg {
+			fill: $error;
+		}
+	}
+}

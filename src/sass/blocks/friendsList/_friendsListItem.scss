@@ -1,0 +1,76 @@
+.friendsListItem {
+	background-color: $bg-content;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem 3.6rem 1rem 3rem;
+	overflow: hidden;
+
+	&__userPreview {
+		overflow: hidden;
+		cursor: pointer;
+	}
+
+	&__actions {
+		display: flex;
+	}
+
+	&__action {
+		margin-left: 2rem;
+		cursor: pointer;
+
+		.icon {
+			height: 2.2rem;
+		}
+
+		svg {
+			height: 100%;
+		}
+
+		&--sendTokens,
+		&--add,
+		&--startConversation {
+			svg {
+				fill: $main;
+			}
+		}
+
+		&--startConversation {
+			.icon {
+				height: 2.1rem;
+				transform: translateY(0.1rem);
+			}
+		}
+
+		&--cancel {
+			svg {
+				fill: $accent;
+			}
+		}
+
+		&--ok {
+			svg {
+				fill: $accept;
+			}
+		}
+	}
+
+	&__invitationStatus {
+		margin-left: 5.8rem;
+		margin-top: 0.3rem;
+		font-size: 1.1rem;
+		display: flex;
+		align-items: center;
+		color: rgba($white, 0.5);
+
+		.icon {
+			height: 1.1rem;
+			margin-right: 0.3rem;
+		}
+
+		svg {
+			height: 100%;
+			fill: rgba($white, 0.5);
+		}
+	}
+}

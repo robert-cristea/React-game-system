@@ -1,0 +1,18 @@
+.userSearchModal {
+	&__search {
+		padding: 9px;
+		border-bottom: 1px solid $med-cyan;
+
+		input {
+			width: 100%;
+			padding: 16px 10px;
+			border-radius: 3px;
+		}
+	}
+
+	&__loading {
+		display: flex;
+		justify-content: center;
+		margin-top: 40px;
+	}
+}

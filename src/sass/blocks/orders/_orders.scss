@@ -1,0 +1,251 @@
+$self: '.orders';
+
+.orders {
+	@include scroll-hide('v');
+
+	overflow-y: auto;
+	padding: $page-padding;
+	min-height: 100%;
+
+	&__loading {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 3.2rem;
+	}
+
+	&__title {
+		font-weight: 500;
+		font-size: 3.2rem;
+		line-height: 4.4rem;
+		letter-spacing: 0.3rem;
+		margin: 0;
+		text-transform: uppercase;
+	}
+
+	&__content {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		background: $bg-content;
+		padding: 6rem 8rem;
+
+		&-wrap {
+			flex-basis: 100%;
+			width: 100%;
+			overflow-x: auto;
+		}
+	}
+
+	&__sub-header {
+		display: flex;
+		flex-basis: 100%;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 3rem;
+	}
+
+	&__sub-footer {
+		display: flex;
+		flex-basis: 100%;
+		justify-content: flex-end;
+		margin-top: 2rem;
+	}
+
+	&__sub-title {
+		font-weight: 400;
+		font-size: 2.4rem;
+		line-height: 3.2rem;
+		letter-spacing: 0.3rem;
+		margin: 0;
+		text-transform: uppercase;
+	}
+
+	&__pagination {
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
+
+		&-text {
+			font-weight: 300;
+			font-size: 1.4rem;
+			line-height: 1.9rem;
+			margin: 0 1.5rem;
+			opacity: 0.5;
+		}
+
+		&-button {
+			display: flex;
+			align-items: center;
+			background: transparent;
+			cursor: pointer;
+
+			&--disabled {
+				opacity: 0.5;
+				pointer-events: none;
+			}
+
+			& + & {
+				margin-left: 2rem;
+			}
+
+			& > .icon {
+				height: 1.5rem;
+
+				svg {
+					height: 100%;
+					fill: $main;
+				}
+			}
+		}
+
+		&-select {
+			position: relative;
+			min-width: 10rem;
+
+			&.select {
+				margin-bottom: 0;
+				width: auto;
+			}
+		}
+	}
+
+	&__table {
+		width: 100%;
+		border-collapse: collapse;
+
+		&-cell {
+			border-bottom: 1px solid rgba($white, 0.1);
+			padding: 1rem 1rem 1rem 0;
+
+			&--truncate {
+				max-width: 25rem;
+			}
+		}
+
+		&-title {
+			text-align: left;
+			font-weight: 700;
+			font-size: 1.4rem;
+			line-height: 1.9rem;
+			margin: 0;
+			text-transform: uppercase;
+
+			&--centered {
+				text-align: center;
+			}
+		}
+	}
+
+	&__item {
+		&-title {
+			font-weight: 700;
+			font-size: 1.4rem;
+			line-height: 1.9rem;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+
+		&-text {
+			font-weight: 300;
+			font-size: 1.4rem;
+			line-height: 1.9rem;
+			opacity: 0.5;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+
+		&-wrap {
+			display: flex;
+			align-items: center;
+		}
+
+		&-price {
+			display: flex;
+			align-items: center;
+			font-weight: 700;
+			font-size: 1.4rem;
+			line-height: 1.9rem;
+			margin: 0 1rem;
+
+			.icon {
+				height: 1.5rem;
+				margin-right: 0.5rem;
+
+				svg {
+					height: 100%;
+					fill: $main;
+				}
+			}
+		}
+
+		&-total {
+			display: flex;
+			align-items: center;
+			overflow: hidden;
+
+			.icon {
+				height: 1.5rem;
+				margin-right: 1rem;
+				flex-shrink: 0;
+
+				svg {
+					height: 100%;
+					fill: $main;
+				}
+			}
+		}
+
+		&-actions {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			overflow: hidden;
+
+			.icon {
+				cursor: pointer;
+				height: 2rem;
+				flex-shrink: 0;
+
+				& + & {
+					margin-left: 0.5rem;
+				}
+
+				svg {
+					height: 100%;
+					fill: $main;
+				}
+			}
+		}
+	}
+
+	&__amount {
+		overflow: hidden;
+
+		&-tokens {
+			font-weight: 700;
+			font-size: 1.4rem;
+			line-height: 1.9rem;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+
+		&-currency {
+			font-weight: 500;
+			font-size: 1rem;
+			line-height: 1.4rem;
+			color: rgba($white, 0.5);
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+	}
+}

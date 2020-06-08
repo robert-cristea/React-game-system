@@ -1,0 +1,16 @@
+image: node:10.15.3
+
+pipelines:
+  branches:
+    release/bioshock:
+      - step:
+          name: Deploy to 'staging'
+          deployment: staging
+          caches:
+            - node
+          script:
+            - pipe: atlassian/ssh-run:0.2.2
+              variables:
+                SSH_USER: 'thejibe'
+                SERVER: '159.203.32.21'
+                COMMAND: 'cd /var/www/staging.turboplay.thejibe.com && git pull && yarn install && yarn build-web:pre --env.config=etc/env.staging.js && yarn build-web:post'

@@ -1,0 +1,75 @@
+.reactionSelector {
+	$self: &;
+
+	position: absolute;
+	display: none;
+
+	&--visible {
+		display: block;
+	}
+
+	&__content {
+		$arrow-point-offset: 14px;
+		$arrow-size: 8px;
+
+		position: absolute;
+		padding: 1rem;
+		background: $bg-content;
+		border-radius: 0.5rem;
+		border: 0.1rem solid $border-light;
+		color: $white;
+		top: -$arrow-point-offset;
+		width: 20vw;
+
+		&::before {
+
+			content: '';
+			position: absolute;
+			top: $arrow-point-offset - $arrow-size;
+			width: 0;
+			height: 0;
+			border: $arrow-size solid transparent;
+		}
+
+		#{$self}--lt &,
+		#{$self}--lb & {
+			right: 0;
+
+			&::before {
+				right: -2*$arrow-size;
+				border-left-color: $border-light;
+			}
+		}
+
+		#{$self}--rt &,
+		#{$self}--rb & {
+			left: 0;
+
+			&::before {
+				left: -2*$arrow-size;
+				border-right-color: $border-light;
+			}
+		}
+	}
+
+	&__emojis {
+		display: flex;
+		flex-wrap: wrap;
+		height: 20rem;
+		overflow: scroll;
+		justify-content: center;
+	}
+
+	&__emoji {
+		width: 3rem;
+		height: 3rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+
+		&:hover {
+			background-color: $med-cyan;
+		}
+	}
+}

@@ -1,0 +1,188 @@
+.infoModal {
+	$self: &;
+
+	&__loading {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__overlay {
+		opacity: 0;
+		transition: opacity 0.2s;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 3rem;
+		overflow-y: scroll;
+
+		// The following class name cannot be changed
+		&.ReactModal__Overlay--after-open {
+			opacity: 1;
+		}
+
+		&.ReactModal__Overlay--before-close {
+			opacity: 0;
+		}
+	}
+
+	&__content {
+		position: relative;
+		width: 76.3rem;
+		background-color: $bg-content;
+		box-shadow: 3px -2px 4px 0 rgba(0, 0, 0, 0.5);
+		border-radius: 0.5rem;
+		padding: 6.2rem 6.5rem;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__close {
+		position: absolute;
+		top: 2rem;
+		right: 2.6rem;
+		padding: 0;
+		z-index: 2;
+
+		.icon {
+			height: 1.4rem;
+
+			svg {
+				height: 100%;
+				fill: rgba($white, 0.5);
+			}
+		}
+	}
+
+	&__header {
+		text-align: center;
+		margin-bottom: 1.4rem;
+	}
+
+	&__headerIcon {
+		margin-bottom: 2.1rem;
+
+		&--circle {
+			height: 4rem;
+		}
+
+		&--error {
+			svg {
+				fill: $error;
+			}
+		}
+
+		&--success {
+			svg {
+				fill: $accept;
+			}
+		}
+
+		&--info {
+			svg {
+				fill: $bright;
+			}
+		}
+
+		&--working {
+			height: 3.5rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			.icon {
+				$speed: 1s;
+
+				margin-right: 3.3rem;
+				animation: infoModal-working $speed linear infinite alternate;
+
+				&:nth-child(2) {
+					animation-delay: 0.25s;
+				}
+
+				&:nth-child(3) {
+					animation-delay: 0.5s;
+				}
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+
+			svg {
+				fill: $main;
+			}
+		}
+
+		.icon {
+			height: 100%;
+		}
+
+		svg {
+			height: 100%;
+		}
+	}
+
+	&__title {
+		font-size: 3.2rem;
+		text-transform: uppercase;
+		letter-spacing: 0.4rem;
+		font-weight: 500;
+		line-height: #{(44/32)};
+	}
+
+	&__main {
+		color: $disabled;
+		text-align: center;
+		font-size: 1.4rem;
+		font-weight: 300;
+		line-height: #{(19/14)};
+		width: 46rem;
+		margin: 0 auto;
+
+		p {
+			margin-bottom: 1rem;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		strong {
+			color: $white;
+			font-weight: 300;
+		}
+	}
+
+	&__actions {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 25px;
+	}
+
+	&__action {
+		margin: 0 12px;
+
+		#{$self}__actions--medium & {
+			min-width: 19.5rem;
+		}
+
+		#{$self}__actions--wide & {
+			min-width: 35rem;
+		}
+	}
+}
+
+@keyframes infoModal-working {
+	from {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0.3;
+	}
+}

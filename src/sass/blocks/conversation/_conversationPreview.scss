@@ -1,0 +1,12 @@
+.conversationPreview {
+	&__stateIcon {
+		.icon {
+			height: 2rem;
+		}
+
+		svg {
+			height: 100%;
+			fill: $main;
+		}
+	}
+}

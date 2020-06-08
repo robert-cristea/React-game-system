@@ -1,0 +1,128 @@
+.cartItem {
+	background: $bg-card;
+	padding: 1rem;
+
+	&:not(:last-child) {
+		margin-bottom: 1.5rem;
+	}
+
+	&__wrap {
+		display: flex;
+		align-items: center;
+	}
+
+	&__loading {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__image {
+		@include aspect-ratio(4, 3, 'img');
+
+		width: 4.5rem;
+		height: 4.5rem;
+		margin-right: 2rem;
+		flex-shrink: 0;
+		align-self: flex-start;
+	}
+
+	&__info {
+		flex-grow: 1;
+		overflow: hidden;
+	}
+
+	&__icon {
+		flex-shrink: 0;
+		margin-right: 1.5rem;
+		margin-left: 0.5rem;
+
+		.icon {
+			height: 1.6rem;
+
+			svg {
+				height: 100%;
+				fill: $main;
+				vertical-align: top;
+			}
+		}
+	}
+
+	&__tokens {
+		font-size: 1.8rem;
+		font-weight: 700;
+		line-height: 2.5rem;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+
+	&__title {
+		font-size: 1.6rem;
+		font-weight: 700;
+		line-height: 2.2rem;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+
+	&__publisher {
+		font-size: 1.2rem;
+		font-weight: 300;
+		line-height: 2rem;
+		color: rgba($white, 0.5);
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+
+	&__price {
+		display: flex;
+		align-items: center;
+		margin-top: 0.5rem;
+
+		.icon {
+			height: 1.2rem;
+			margin-right: 0.5rem;
+			flex-shrink: 0;
+
+			svg {
+				height: 100%;
+				fill: $main;
+				vertical-align: top;
+			}
+		}
+
+		&-tokens {
+			font-size: 1.5rem;
+			font-weight: 700;
+			line-height: 2rem;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+
+			&--sale {
+				opacity: 0.5;
+				margin-right: 0.5rem;
+				text-decoration: line-through;
+			}
+		}
+	}
+
+	&__tokens {
+
+	}
+
+	&__button {
+		flex-shrink: 0;
+		margin: 0 1rem 0 2rem;
+
+		.icon {
+			height: 1.5rem;
+
+			svg {
+				height: 100%;
+				fill: $main;
+			}
+		}
+	}
+}

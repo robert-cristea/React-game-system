@@ -1,0 +1,70 @@
+/**
+ * Rebranding Styles
+ */
+
+@import '~normalize.css';
+@import 'typography';
+@import 'variables';
+@import 'base';
+
+@import 'mixins/index';
+@import 'utils/index';
+
+@import 'atomic/index';
+
+@import 'blocks/screenGroups/index';
+
+@import 'screen-animations/fade';
+@import 'screen-animations/lateralPush';
+@import 'screen-animations/loginGarageDoor';
+
+@import 'blocks/app';
+@import 'blocks/appHeader/index';
+@import 'blocks/appSidebar/index';
+@import 'blocks/welcome/index';
+@import 'blocks/userGames/index';
+@import 'blocks/shop/index';
+@import 'blocks/launch/index';
+@import 'blocks/gameDetails/index';
+@import 'blocks/cart/index';
+@import 'blocks/checkout/index';
+@import 'blocks/friendsList/index';
+@import 'blocks/user/index';
+@import 'blocks/modal/index';
+@import 'blocks/orders/index';
+@import 'blocks/activity/index';
+@import 'blocks/sidebar';
+@import 'blocks/messages/index';
+@import 'blocks/conversation/index';
+@import 'blocks/message/index';
+@import 'blocks/toast/index';
+@import 'blocks/confirmDialog/index';
+
+/**
+ * Legacy Styles
+ */
+
+@import 'blocks/activities';
+@import 'blocks/appBar';
+@import 'blocks/appBarAction';
+@import 'blocks/appBarActions';
+@import 'blocks/appSettings';
+@import 'blocks/appTab';
+@import 'blocks/appTabs';
+@import 'blocks/calendar';
+@import 'blocks/communityPreview';
+@import 'blocks/events';
+@import 'blocks/flashMessage';
+@import 'blocks/multiAvatars';
+@import 'blocks/profilePreview';
+@import 'blocks/multiAvatars';
+@import 'blocks/scrollableView';
+@import 'blocks/sectionTab';
+@import 'blocks/sectionTabs';
+@import 'blocks/streams';
+@import 'blocks/stream';
+@import 'blocks/streamList';
+@import 'blocks/streamPreview';
+@import 'blocks/tabs';
+@import 'blocks/trophies';
+@import 'blocks/userProfile';

@@ -1,0 +1,82 @@
+.orderInfo {
+	&__title {
+		font-weight: 700;
+		font-size: 1.4rem;
+		line-height: 1.9rem;
+		margin: 0;
+		text-transform: uppercase;
+	}
+
+	&__text {
+		font-weight: 300;
+		font-size: 1.4rem;
+		line-height: 1.9rem;
+		margin: 0;
+		opacity: 0.5;
+	}
+
+	&__status {
+		display: flex;
+		align-items: center;
+		flex-wrap: nowrap;
+
+		&-icon {
+			height: 0.8rem;
+			width: 0.8rem;
+			border-radius: 0.4rem;
+			margin-right: 1rem;
+			background: $bg-card;
+
+			&--success {
+				background: $success;
+			}
+
+			&--processing {
+				background: $progress;
+			}
+
+			&--declined {
+				background: $error;
+			}
+		}
+
+		&-text {
+			font-weight: 700;
+			font-size: 1.4rem;
+			line-height: 1.9rem;
+			margin: 0;
+		}
+	}
+
+	&__card {
+		display: flex;
+		flex-wrap: nowrap;
+		margin-top: 1rem;
+		overflow: hidden;
+
+		&-icon {
+			width: auto;
+			margin-right: 2rem;
+			height: 3.5rem;
+
+			svg {
+				height: 100%;
+			}
+		}
+
+		&-details {
+			display: flex;
+			flex-wrap: nowrap;
+			white-space: nowrap;
+			overflow: hidden;
+		}
+
+		&-title {
+			margin: 0 1rem;
+		}
+	}
+
+	&__address {
+		margin-top: 1rem;
+	}
+}

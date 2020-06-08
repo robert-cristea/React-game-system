@@ -1,0 +1,35 @@
+/**
+ * Simple fade-in / fade-out
+ */
+.screenAnimation__fade {
+	.screenAnimation-enter {
+		opacity: 0;
+	}
+
+	.screenAnimation-enter-active {
+		animation-name: fade_enter;
+		animation-delay: 0.3s;
+		animation-duration: 0.5s;
+		animation-fill-mode: forwards;
+	}
+
+	@keyframes fade_enter {
+		from { opacity: 0; }
+		to { opacity: 1; }
+	}
+
+	.screenAnimation-exit {
+		opacity: 1;
+	}
+
+	.screenAnimation-exit-active {
+		animation-name: fade_exit;
+		animation-duration: 0.3s;
+		animation-fill-mode: forwards;
+	}
+
+	@keyframes fade_exit {
+		from { opacity: 1; }
+		to { opacity: 0; }
+	}
+}

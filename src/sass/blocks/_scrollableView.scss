@@ -1,0 +1,21 @@
+.scrollableView {
+	$self: &;
+	position: relative;
+	flex: 1;
+
+	&__content {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		overflow: auto;
+		@include scroll-hide('v')		
+	}
+
+	&__streams {
+		& #{$self}__content {
+			padding-top: 5px;
+		}
+	}
+}

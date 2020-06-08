@@ -1,0 +1,11 @@
+.sidebar {
+	background-color: $bg-content;
+	border-right: 0.1rem solid $bg-card;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+
+	&__header {
+		background-color: $bg-page;
+	}
+}

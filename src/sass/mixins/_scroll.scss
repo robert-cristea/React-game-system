@@ -1,0 +1,19 @@
+@mixin scroll-hide($direction: 'h') {
+	&::-webkit-scrollbar {
+		@if $direction == 'v' {
+			width: 0;
+		}
+		@if $direction == 'h' {
+			height: 0;
+		}
+	}
+}
+
+@mixin scroll-style($bg: transparent, $thumb-color: $main) {
+	&::-webkit-scrollbar {
+		background: $bg
+	}
+	&::-webkit-scrollbar-thumb {
+		background: $thumb-color;
+	}
+}

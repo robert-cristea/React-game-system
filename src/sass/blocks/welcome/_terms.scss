@@ -1,0 +1,46 @@
+.terms {
+	&__content {
+		@include scroll-style();
+
+		max-height: 50vh;
+		overflow-y: auto;
+		padding: 5rem 9rem;
+		background: $bg-page;
+
+		&::-webkit-scrollbar {
+			width: 25px;
+		}
+
+		&-title {
+			font-weight: 500;
+			font-size: 2.4rem;
+			line-height: 3.3rem;
+			margin-bottom: 3rem;
+			letter-spacing: 0.3rem;
+			text-transform: uppercase;
+			text-align: center;
+		}
+
+		&-text {
+			font-weight: 300;
+			font-size: 1.3rem;
+			line-height: 1.8rem;
+			color: rgba($white, 0.9);
+		}
+	}
+
+	&__footer {
+		display: flex;
+		flex-direction: column;
+		padding: 3rem 5rem;
+	}
+
+	&__submit {
+		max-width: 23rem;
+		margin: 2rem auto;
+	}
+
+	&__eula {
+		text-align: center;
+	}
+}

@@ -1,0 +1,272 @@
+.userGame {
+	$self: &;
+	$base-height: 7.5rem;
+	$image-width: 8rem;
+	$toggle-width: 4rem;
+
+	display: flex;
+	position: relative;
+	overflow: hidden;
+	background: $bg-card;
+
+	&--list {
+		height: $base-height;
+		flex-direction: row;
+	}
+
+	&--grid {
+		flex-direction: column;
+	}
+
+	&__image {
+		@include aspect-ratio(3, 4, 'img');
+
+		background: $bg-content;
+		font-size: 0;
+		cursor: pointer;
+
+		&--disabled {
+			&::after {
+				display: block;
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				background: rgba($bg-card, 0.85);
+				z-index: 1;
+			}
+		}
+
+		img {
+			width: 100%;
+		}
+
+		#{$self}--list & {
+			width: $image-width;
+			height: 100%;
+
+			&:first-child {
+				margin-left: $toggle-width;
+			}
+		}
+
+		#{$self}--grid & {
+			width: 100%;
+		}
+	}
+
+	&__wrap {
+		display: flex;
+		align-items: center;
+		flex-grow: 1;
+		height: $base-height;
+	}
+
+	&__title {
+		background: transparent;
+		font-weight: 700;
+		font-size: 1.8rem;
+		line-height: 2.5rem;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		cursor: pointer;
+
+		&:first-child {
+			margin-left: 2rem;
+		}
+
+		&:last-child {
+			margin-right: 2rem;
+		}
+	}
+
+	&__actions {
+		margin-left: auto;
+		margin-right: 1rem;
+		flex-shrink: 0;
+	}
+
+	&__action {
+		padding: 2rem 0.8rem;
+		margin: 0 !important;
+
+		.icon {
+			height: 2.2rem;
+
+			svg {
+				height: 100%;
+				fill: $main;
+			}
+		}
+
+		&--small {
+			.icon {
+				height: 1.6rem;
+			}
+		}
+	}
+
+	&__download {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: $base-height;
+		z-index: 1;
+		pointer-events: none;
+
+		#{$self}--list & {
+			height: 100%;
+			left: $toggle-width;
+
+			.progressBar__text {
+				width: $image-width;
+			}
+		}
+
+		#{$self}--grid & {
+			left: 0;
+		}
+	}
+
+	&__dl-overlay {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: $base-height;
+		pointer-events: none;
+		z-index: 1;
+
+		#{$self}--list & {
+			left: $toggle-width;
+			bottom: 0;
+		}
+
+		#{$self}--grid & {
+			left: 0;
+			bottom: $base-height;
+		}
+
+		&-text {
+			font-weight: 300;
+			font-size: 1.6rem;
+			line-height: 2.2rem;
+			background: rgba($bg-card, 0.75);
+			padding: 1rem 2rem;
+			border-radius: 0.5rem;
+		}
+	}
+
+	&__overlay {
+		position: absolute;
+		background: rgba($bg-card, 0.95);
+		border-bottom: 0.1rem solid $black;
+		z-index: 2;
+
+		#{$self}--list & {
+			left: $toggle-width;
+			right: 0;
+			height: 100%;
+			padding: 0 1rem;
+			display: flex;
+			align-items: center;
+		}
+
+		#{$self}--grid & {
+			bottom: $base-height;
+			left: 0;
+			width: 100%;
+			padding: 1rem;
+		}
+
+		&-group {
+			margin: 1rem;
+		}
+
+		&-btn {
+			font-size: 1.2rem;
+			line-height: 1.6rem;
+		}
+
+		&-params {
+			font-weight: 300;
+			font-size: 1.2rem;
+			line-height: 1.6rem;
+			color: rgba($white, 0.5);
+			display: flex;
+
+			&:last-of-type {
+				overflow: hidden;
+			}
+
+			#{$self}--list & {
+				white-space: nowrap;
+
+				dt::after {
+					content: ':\00a0'; // NBS
+				}
+			}
+
+			#{$self}--grid & {
+				dt {
+					flex-basis: 30%;
+					flex-shrink: 0;
+					padding-right: 1rem;
+				}
+			}
+
+			dd {
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+		}
+
+		&-close {
+			#{$self}--list & {
+				padding: 1rem;
+				margin-left: auto;
+			}
+
+			#{$self}--grid & {
+				position: absolute;
+				top: 1rem;
+				right: 1rem;
+				padding: 0;
+			}
+
+			.icon {
+				height: 1.2rem;
+
+				svg {
+					height: 100%;
+					fill: $main;
+				}
+			}
+		}
+
+		&-toggle {
+			opacity: 0.5;
+			width: $toggle-width;
+			padding: 2rem 0;
+			flex-shrink: 0;
+
+			&--active {
+				opacity: 1;
+			}
+
+			.icon {
+				height: 2rem;
+
+				svg {
+					height: 100%;
+					fill: $white;
+				}
+			}
+		}
+	}
+}

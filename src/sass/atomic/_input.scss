@@ -1,0 +1,45 @@
+input {
+	@include input;
+
+	&::placeholder {
+		color: rgba($white, 0.5);
+	}
+}
+
+.input {
+	position: relative;
+
+	&:not(:last-child) {
+		margin-bottom: 2rem;
+	}
+
+	&--transparent input {
+		background: transparent;
+	}
+
+	&--error input {
+		border-color: $accent;
+	}
+
+	&--search {
+		position: relative;
+
+		input {
+			padding-right: 4.5rem;
+		}
+
+		.btn {
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		.btn--transparent .icon {
+			svg {
+				height: 100%;
+				fill: $white;
+			}
+		}
+	}
+}

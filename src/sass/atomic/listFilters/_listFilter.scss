@@ -1,0 +1,24 @@
+.listFilter {
+	text-transform: uppercase;
+	font-weight: 900;
+	color: #888;
+	cursor: pointer;
+	font-size: 1.2rem;
+	letter-spacing: 0.1rem;
+	transition: color 0.1s;
+	display: flex;
+	align-items: center;
+
+	&--active {
+		color: $white;
+	}
+
+	&:hover {
+		color: $white;
+	}
+
+	&__icon {
+		margin-right: 0.7rem;
+		transform: translateY(-0.1rem);
+	}
+}

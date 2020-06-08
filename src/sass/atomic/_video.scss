@@ -1,0 +1,165 @@
+.rh5v {
+	$self: &;
+	$controls-height: 5rem;
+
+	&-DefaultPlayer {
+		&_component {
+			font-size: 0;
+			padding-bottom: $controls-height;
+		}
+
+		&_video {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		&_controls {
+			position: absolute;
+			bottom: 0;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			background: $bg-card;
+			padding: 0 1rem;
+			width: 100%;
+			height: $controls-height;
+
+			// opacity: 0;
+			// transition: opacity 0.15s ease;
+			// will-change: opacity;
+
+			// &:hover,
+			// #{$self}-DefaultPlayer_component:hover & {
+			// 	opacity: 1;
+			// }
+
+			button {
+				background: transparent;
+			}
+
+			input {
+				padding: 0;
+				border: 0;
+				background: transparent;
+			}
+
+			svg {
+				fill: $main;
+			}
+		}
+	}
+
+	&-PlayPause_component {
+		padding: 0 0.5rem;
+		height: 2.4rem;
+	}
+
+	&-Seek {
+		&_component {
+			flex-grow: 1;
+			padding: 0 0.5rem;
+		}
+
+		&_track {
+			background: $bg-page;
+			position: relative;
+			height: 1.5rem;
+			border-radius: 0.75rem;
+			overflow: hidden;
+
+			input {
+				opacity: 0;
+			}
+		}
+
+		&_buffer,
+		&_fill {
+			min-width: 1.5rem;
+			position: absolute;
+			pointer-events: none;
+			height: 100%;
+			border-radius: 0.75rem;
+		}
+
+		&_buffer {
+			background: $bg-content;
+			z-index: 1;
+		}
+
+		&_fill {
+			background: $main;
+			z-index: 2;
+		}
+	}
+
+	&-Overlay_component {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, calc((-100% - #{$controls-height}) / 2));
+
+		svg {
+			fill: $main;
+			border: 0.2rem solid $main;
+			border-radius: 50%;
+		}
+	}
+
+	&-Time_component {
+		padding: 0 0.5rem;
+		font-size: 1.2rem;
+		font-weight: 500;
+		line-height: 1.5rem;
+		color: rgba($white, 0.5);
+	}
+
+	&-Volume {
+		&_component {
+			display: flex;
+			align-items: center;
+			padding: 0 0.5rem;
+			flex-basis: 10rem;
+			flex-grow: 0;
+			flex-shrink: 0;
+		}
+
+		&_button {
+			height: 2.4rem;
+			margin-right: 0.5rem;
+		}
+
+		&_slider {
+			flex-grow: 1;
+		}
+
+		&_track {
+			position: relative;
+			background: $bg-page;
+			height: 1rem;
+			border-radius: 0.5rem;
+			overflow: hidden;
+
+			input {
+				-webkit-appearance: none;
+			}
+
+			input::-webkit-slider-thumb {
+				-webkit-appearance: none;
+				background: $main;
+				height: 1rem;
+				width: 1rem;
+				border-radius: 50%;
+			}
+		}
+
+		&_fill {
+			display: none;
+		}
+	}
+
+	&-Fullscreen_component {
+		padding: 0 0.5rem;
+		height: 2.4rem;
+	}
+}

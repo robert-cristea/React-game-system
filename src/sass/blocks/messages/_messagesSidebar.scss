@@ -1,0 +1,130 @@
+.messagesSidebar {
+	&__button {
+		margin: 0 2rem 4rem;
+	}
+
+	&__header {
+		display: flex;
+		padding: 2.3rem 2rem;
+		align-items: center;
+	}
+
+	&__headerMain {
+		flex-grow: 1;
+		overflow: hidden;
+	}
+
+	&__headerAction {
+		cursor: pointer;
+
+		.icon {
+			height: 2rem;
+		}
+
+		svg {
+			height: 100%;
+			fill: $main;
+		}
+	}
+
+	&__headerPost {
+		margin-left: 1.7rem;
+		flex-shrink: 0;
+	}
+
+	&__headerPre {
+		margin-right: 1.7rem;
+		padding: 1.5rem 0;
+		align-self: flex-start;
+		flex-shrink: 0;
+	}
+
+	&__main {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+	}
+
+	&__title {
+		text-transform: uppercase;
+		padding: 0 2.1rem;
+		margin-bottom: 1.7rem;
+		font-weight: 900;
+		letter-spacing: 0.13rem;
+		font-size:1.8rem;
+	}
+
+	&__loading {
+		display: flex;
+		justify-content: center;
+		margin-top: 40px;
+	}
+
+	&__empty {
+		text-align: center;
+		opacity: 0.5;
+		margin-top: 40px;
+	}
+
+	&__list {
+		flex: 1;
+	}
+
+	&__scrollableContent {
+		padding: 3.2rem 0;
+	}
+
+	&__item {
+		padding: 1.4rem 2rem;
+		cursor: pointer;
+
+		&:hover {
+			background-color: $bg-card;
+		}
+
+		&--active {
+			background-color: $bg-card;
+		}
+	}
+
+	&__groupName {
+		margin-top: 1.1rem;
+		position: relative;
+
+		.icon {
+			height: 1.8rem;
+		}
+
+		svg {
+			height: 100%;
+		}
+
+		input {
+			padding-left: 3.7rem;
+		}
+
+		&-preAction,
+		&-postAction {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		&-preAction {
+			left: 1.2rem;
+
+			svg {
+				fill: rgba($white, 0.5);
+			}
+		}
+
+		&-postAction {
+			cursor: pointer;
+			right: 1.2rem;
+
+			svg {
+				fill: $main;
+			}
+		}
+	}
+}

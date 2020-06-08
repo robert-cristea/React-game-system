@@ -1,0 +1,80 @@
+.welcome {
+	&__wrap {
+		max-width: 45rem;
+
+		&--wide {
+			max-width: 75rem;
+		}
+
+		&--fullscreen {
+			padding: 0;
+		}
+	}
+
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 5rem;
+
+		&-logo {
+			height: 5rem;
+
+			svg {
+				height: 100%;
+				fill: $main;
+			}
+		}
+
+		&-text {
+			height: 1.8rem;
+			margin-left: 2rem;
+
+			svg {
+				height: 100%;
+				fill: $white;
+			}
+		}
+	}
+
+	&__footer {
+		margin-top: 3rem;
+
+		&-title {
+			text-align: center;
+			color: rgba($white, 0.5);
+			font-weight: 300;
+			font-size: 1.4rem;
+			line-height: 3rem;
+		}
+
+		&-actions {
+			text-align: center;
+
+			&:not(:first-of-type) {
+				margin-top: 1.5rem;
+			}
+		}
+
+		&-separator {
+			display: inline-block;
+			vertical-align: middle;
+			background: $border;
+			margin: 0 15px;
+			width: 1px;
+			height: 1.6rem;
+		}
+	}
+
+	&__link {
+		font-weight: 300;
+		font-size: 1.2rem;
+		line-height: 1.6rem;
+		padding: 0.5rem 0;
+	}
+
+	&__form {
+		margin-bottom: 4rem;
+		padding: 0 4rem;
+	}
+}

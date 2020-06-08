@@ -1,0 +1,53 @@
+.appSettings {
+  width: 100%;
+  box-shadow: -10px 0px 45px -15px rgba(0, 0, 0, 0.75);
+  &__user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 17px 18px;
+    color: $dark-cyan;
+    height: 73px;
+    &-alias {
+      font-size: 12px;
+      margin-top: 5px;
+      opacity: 0.5;
+    }
+    .icon {
+      fill: $dark-cyan;
+      opacity: 0.3;
+      width: 15px;
+      cursor: pointer;
+    }
+    button {
+      background: transparent;
+    }
+  }
+  &__balance {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px 10px 17px 6px;
+    font-size: 12px;
+    background-color: $dark-cyan;
+    color: $white;
+    .btn-sm {
+      min-width: 63px;
+    }
+  }
+  &__item {
+    font-size: 14px;
+    padding: 18px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(151, 151, 151, 0.3);
+    width: 100%;
+    > .icon {
+      fill: black;
+      width: 8px;
+      height: 13px;
+    }
+  }
+}

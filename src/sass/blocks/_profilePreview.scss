@@ -1,0 +1,82 @@
+.profilePreview {
+  &__head {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 36px 0 16px;
+  }
+  &__loading {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+  &__avatar {
+    height: 66px;
+    width: 66px;
+    margin-bottom: 16px;
+  }
+  &__displayName {
+    margin-bottom:4px;
+  }
+  &__username {
+    font-size: 12px;
+    opacity: 0.5;
+  }
+  &__now {
+    padding: 16px;
+  }
+  &__trophies {
+    margin: 20px 0;
+  }
+  &__stream {
+    border-left: 5px solid $bright;
+    &-description {
+      font-size: 12px;
+      opacity: 0.5;
+      margin: 8px 0;
+    }
+    &-clock {
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      > .icon {
+        fill: $yellow;
+        width: 14px;
+        margin-right: 10px;
+      }
+    }
+    &-watch {
+      align-self: center;
+      padding: 6px 20px;
+      margin-left: 10px;
+    }
+  }
+  &__details {
+    font-size: 14px;
+    &-item {
+      padding: 16px;
+      border-bottom: 1px solid $med-cyan;
+      display: flex;
+      align-items: center;
+      @include icon($yellow);
+      > .icon {
+        width: 18px;
+        height: 18px;
+        margin-right: 6px;
+      }
+    }
+  }
+  &__wallet {
+    display: flex;
+    overflow: hidden;
+
+    .icon {
+      flex-shrink: 0;
+    }
+
+    &-number {
+      white-space: normal;
+      word-break: break-all;
+    }
+  }
+}

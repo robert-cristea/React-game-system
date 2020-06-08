@@ -1,0 +1,67 @@
+.appHeader {
+	background: $bg-card;
+	display: flex;
+	height: 100px;
+	padding: 3rem 2rem;
+	will-change: opacity, transform;
+
+	&__logo {
+		display: flex;
+		align-items: center;
+		background: transparent;
+		cursor: pointer;
+
+		&-icon {
+			height: 3.2rem;
+
+			svg {
+				height: 100%;
+				fill: $main;
+			}
+		}
+
+		&-text {
+			height: 1.2rem;
+			margin-left: 1.3rem;
+
+			svg {
+				height: 100%;
+				fill: $white;
+			}
+		}
+	}
+
+	&__content {
+		display: flex;
+		align-items: center;
+		margin-left: auto;
+	}
+
+	&__item {
+		position: relative;
+		display: flex;
+		align-items: center;
+		height: 100%;
+		padding-left: 1.5rem;
+
+		&--static {
+			position: static;
+		}
+
+		&:not(:last-child) {
+			padding-right: 1.5rem;
+
+			&::after {
+				content: '';
+				opacity: .1;
+				width: .1rem;
+				height: 2rem;
+				background: $white;
+				position: absolute;
+				right: 0;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+	}
+}

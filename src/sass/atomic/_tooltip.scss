@@ -1,0 +1,38 @@
+.tooltip {
+	padding: 1rem 2rem;
+	background: $bg-content !important;
+	border-radius: 0.5rem;
+	border: 0.1rem solid $border-light;
+	will-change: opacity, transition;
+
+	font-weight: 500 !important;
+	font-size: 1.2rem !important;
+	line-height: 1.6rem !important;
+	letter-spacing: 0 !important;
+	color: $white !important;
+
+	&::after {
+		border-bottom-color: $border-light !important;
+		border-top-color: $border-light !important;
+	}
+
+	&::before {
+		border-bottom-color: $border-light !important;
+		border-top-color: $border-light !important;
+	}
+
+	&--light {
+		background: $bg-card !important;
+		border-color: $bg-card !important;
+
+		&::after {
+			border-bottom-color: $bg-card !important;
+			border-top-color: $bg-card !important;
+		}
+
+		&::before {
+			border-bottom-color: $bg-card !important;
+			border-top-color: $bg-card !important;
+		}
+	}
+}

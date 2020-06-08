@@ -1,0 +1,58 @@
+.checkbox {
+	$self: &;
+
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+
+	input[type="checkbox"] {
+		position: absolute;
+		opacity: 0;
+		width: 1.5rem;
+		height: 1.5rem;
+		cursor: pointer;
+
+		&:checked + #{$self}__icon .icon {
+			opacity: 1;
+		}
+	}
+
+	&__icon {
+		position: relative;
+		display: inline-block;
+		flex-shrink: 0;
+		width: 1.5rem;
+		height: 1.5rem;
+		border: 0.1rem solid $main;
+		border-radius: 0.3rem;
+		margin-right: 1.5rem;
+		cursor: pointer;
+
+		.icon {
+			opacity: 0;
+			position: absolute;
+			transition: opacity 0.3s ease;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+
+			svg {
+				height: 100%;
+				padding: 0.2rem;
+				fill: $main;
+			}
+		}
+	}
+
+	&__label {
+		text-align: left;
+		font-weight: 300;
+		font-size: 1.2rem;
+		line-height: 1.6rem;
+		letter-spacing: 0;
+		padding: 0.5rem 0;
+		color: $main;
+		cursor: pointer;
+	}
+}

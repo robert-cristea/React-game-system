@@ -1,0 +1,93 @@
+.toast {
+	$self: &;
+
+	transition: opacity 0.5s, transform 0.5s;
+	margin-bottom: 1rem;
+	border-radius: 1.7rem;
+	background-color: $bg-card;
+	box-shadow: 0 3px 8px $bg-page;
+	width: 36rem;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	&--entering {
+		display: block;
+		opacity: 0;
+		transform: translateY(2.5rem);
+	}
+
+	&--entered {
+		opacity: 1;
+	}
+
+	&--exiting {
+		opacity: 0;
+		transform: translateX(-2.5rem);
+	}
+
+	&--error {
+		#{$self}__icon {
+			margin-left: -2rem;
+
+			svg {
+				fill: $accent;
+			}
+		}
+	}
+
+	&--warning {
+		#{$self}__icon {
+			margin-left: -2rem;
+
+			svg {
+				fill: $main;
+			}
+		}
+	}
+
+	&__icon {
+		padding: 0.8rem;
+
+		.icon {
+			height: 1.8rem;
+		}
+
+		svg {
+			fill: $white;
+			height: 100%;
+		}
+	}
+
+	&__content {
+		display: flex;
+		padding-left: 2rem;
+	}
+
+	&__message {
+		padding: 0.8rem 0;
+		flex: 1;
+	}
+
+	&__close {
+		padding: 0.8rem;
+		cursor: pointer;
+		margin-left: 1rem;
+		opacity: 0.1;
+		transition: opacity 0.2s;
+
+		#{$self}:hover & {
+			opacity: 0.8;
+		}
+
+		.icon {
+			height: 1.8rem;
+		}
+
+		svg {
+			fill: $white;
+			height: 100%;
+		}
+	}
+}

@@ -1,0 +1,11 @@
+.events {
+	$self: &;
+
+	@include scroll-hide('v');
+
+	overflow-y: auto;
+
+	&__wrap {
+		padding: $page-padding;
+	}
+}

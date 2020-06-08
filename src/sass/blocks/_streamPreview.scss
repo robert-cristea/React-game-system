@@ -1,0 +1,50 @@
+.streamPreview {
+  width: 100%;
+  background: $bg-card;
+
+  &__details {
+    padding: 1rem 2rem;
+  }
+
+  &__name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2.5rem;
+  }
+
+  &__publisher {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 2rem;
+    color: rgba($white, 0.5);
+  }
+
+  &__poster {
+    @include icon($white);
+    @include aspect-ratio(402, 200, '.streamPreview__image');
+    cursor: pointer;
+    .icon {
+      position: absolute;
+      bottom: 5px;
+      left: 7px;
+      z-index: 1;
+      & svg {
+        height: 40px;
+      }
+    }
+    &:after {
+      content: '';
+      width: 75%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-image: linear-gradient(to right, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.41) 40%, rgba(0,0,0,0) 100%);
+    }
+  }
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

@@ -1,0 +1,68 @@
+.conversationHistory {
+	padding: 5.5rem 9rem 2rem;
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+
+
+	&__empty {
+		background: $bg-card;
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		.icon {
+			height: 9rem;
+			margin-bottom: 2rem;
+
+			svg {
+				height: 100%;
+				fill: rgba($white, 0.1);
+			}
+		}
+
+		&-title {
+			font-size: 2.4rem;
+			line-height: 3.2rem;
+			font-weight: 300;
+			color: rgba($white, 0.2);
+		}
+	}
+
+	&__wrapper {
+		// Allows for scrolling flex-layout
+		flex: 1 1 auto;
+		overflow-y: auto;
+		height: 0;
+	}
+
+	&__loader {
+		display: flex;
+		margin-bottom: 2rem;
+		justify-content: center;
+	}
+
+	&__entry {
+		margin-bottom: 4rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__event {
+		color: rgba($white, 0.5);
+		font-style: italic;
+		font-size: 1.4rem;
+		background-color: $bg-content;
+		padding: 1.4rem 2rem;
+		border-radius: 0.5rem;
+	}
+
+	&__reactionSelector {
+		z-index: 2;
+	}
+}
+

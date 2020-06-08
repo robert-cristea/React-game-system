@@ -1,0 +1,60 @@
+.trophies {
+  $self: &;
+  &__graphic {
+    // TODO: clean up tmp styles after prototype
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    &-wrapper {
+      @include aspect-ratio(2320, 610,'.trophies__graphic')
+    }
+  }
+  &__container {
+    // TODO: revisit top margin after graphic paste
+    margin: 20px 0 50px 0;
+  }
+  &__collection {
+    display: flex;
+    align-items: flex-end;
+  }
+  &__trophy {
+    display: flex;
+    //font-family: Avenir
+    flex: 1 1 0;
+    .icon {
+      width: 17px;
+    }
+  }
+  &__current {
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 900;
+  }
+  &__wall {
+    display: flex;
+    margin-left: auto;
+    font-size: 28px;
+    flex: 1 1 70%;
+    #{$self}__trophy {
+      justify-content: flex-end;
+    }
+    .icon {
+      margin-right: 10px;
+    }
+  }
+  &__gold, &__current {
+    > .icon {
+      fill: $gold;
+    }
+  }
+  &__silver {
+    > .icon {
+      fill: $silver;
+    }
+  }
+  &__bronze {
+    > .icon {
+      fill: $bronze;
+    }
+  }
+}

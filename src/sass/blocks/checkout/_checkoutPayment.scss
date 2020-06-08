@@ -1,0 +1,33 @@
+.checkoutPayment {
+	.inlineTokenAmount {
+		color: $white;
+	}
+
+	&__amountRow {
+		border-bottom: 1px solid rgba($white, 0.1);
+
+		&:first-child {
+			padding-top: 0;
+		}
+	}
+
+	&__status {
+		margin-bottom: 1.8rem;
+	}
+
+	&__details {
+		color: $white;
+		opacity: 0.5;
+		text-align: right;
+		font-size: 1.1rem;
+		margin-top: 1.6rem;
+	}
+
+	&__actions {
+		margin-top: 1.6rem;
+
+		.btn {
+			width: 100%;
+		}
+	}
+}

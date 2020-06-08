@@ -1,0 +1,32 @@
+.shop {
+	$self: &;
+
+	@include scroll-hide('v');
+
+	overflow-y: auto;
+	padding: 3rem $page-padding $page-padding;
+	min-height: 100%;
+
+	&__loading {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%);
+	}
+
+	&__header {
+		display: flex;
+		margin-bottom: 4rem;
+	}
+
+	&__category {
+		position: relative;
+		margin-right: 1rem;
+		min-width: 26rem;
+
+		&.select {
+			margin-bottom: 0;
+			width: auto;
+		}
+	}
+}

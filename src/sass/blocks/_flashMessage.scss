@@ -1,0 +1,12 @@
+.flashMessage {
+	cursor: pointer;
+	white-space: nowrap;
+	display: flex;
+	padding: 6px 32px;
+	
+	.icon {
+		fill: $yellow;
+		width: 6px;
+		margin-left: 10px;
+	}
+}

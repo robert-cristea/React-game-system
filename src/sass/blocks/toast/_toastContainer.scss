@@ -1,0 +1,45 @@
+.toastContainer {
+	box-sizing: border-box;
+	max-height: 100%;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	padding: 0.8rem;
+	position: fixed;
+	z-index: 1;
+
+	&--empty {
+		pointer-events: none;
+	}
+
+	&--top-left {
+		top: 0;
+		left: 0;
+	}
+
+	&--top-center {
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	&--top-right {
+		top: 0;
+		right: 0;
+	}
+
+	&--bottom-left {
+		bottom: 0;
+		left: 0;
+	}
+
+	&--bottom-center {
+		bottom: 10rem;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	&--bottom-right {
+		bottom: 0;
+		right: 0;
+	}
+}

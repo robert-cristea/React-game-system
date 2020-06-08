@@ -1,0 +1,54 @@
+.communityPreview {
+	&__item {
+		display: flex;
+		align-items: center;
+		padding: 2rem;
+		background: $bg-content;
+		cursor: pointer;
+	}
+
+	&__image {
+		@include aspect-ratio(4, 3, 'img');
+
+		width: 8rem;
+		height: 8rem;
+		margin-right: 2rem;
+		flex-shrink: 0;
+	}
+
+	&__tags {
+		display: flex;
+		margin: 1rem 0;
+	}
+
+	&__tag {
+		border-radius: 2rem;
+		padding: 0.2rem 2rem;
+		font-weight: 500;
+		font-size: 9px;
+		line-height: 12px;
+		text-transform: uppercase;
+		color: rgba($white, 0.5);
+		border-color: $bg-card;
+		background: $bg-card;
+	}
+
+	&__title {
+		font-size: 1.8rem;
+		font-weight: 700;
+		line-height: 2.5rem;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+
+	&__count {
+		font-size: 1.4rem;
+		font-weight: 500;
+		line-height: 2rem;
+		color: rgba($white, 0.5);
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+}

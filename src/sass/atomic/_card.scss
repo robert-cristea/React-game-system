@@ -1,0 +1,24 @@
+.card {
+	background: $bg-content;
+	padding: $page-padding 2rem;
+	text-align: center;
+
+	&__title {
+		font-weight: 700;
+		font-size: 1.8rem;
+		line-height: 2.5rem;
+		margin-bottom: 0.5rem;
+	}
+
+	&__text {
+		color: rgba($white, 0.5);
+		font-weight: 300;
+		font-size: 1.4rem;
+		line-height: 1.9rem;
+	}
+
+	&__btn {
+		max-width: 23rem;
+		margin-top: 2.5rem;
+	}
+}

@@ -1,0 +1,85 @@
+/**
+ * The "higher" screen will "push" the lower one. The higher enters (and "pushes") and leaves to the
+ * right, the lower enters and leaves to the left.
+ */
+.screenAnimation__lateralPush {
+	// When a "higher" screen (route) is entering
+	&--entering {
+		// The entering screen
+		> .screenAnimation-enter {
+			transform: translateY(2rem);
+			opacity: 0;
+			z-index: 2;
+		}
+
+		> .screenAnimation-enter-active {
+			animation-name: lateralPush_entering_enter;
+			animation-delay: 0.3s;
+			animation-duration: 0.5s;
+			animation-fill-mode: forwards;
+		}
+
+		@keyframes lateralPush_entering_enter {
+			from { transform: translateY(2rem); opacity: 0; }
+			to { transform: translateY(0); opacity: 1; }
+		}
+
+		// The leaving screen
+		> .screenAnimation-exit {
+			transform: translateY(0);
+			opacity: 1;
+			z-index: 1;
+		}
+
+		> .screenAnimation-exit-active {
+			animation-name: lateralPush_entering_exit;
+			animation-duration: 0.5s;
+			animation-fill-mode: forwards;
+		}
+
+		@keyframes lateralPush_entering_exit {
+			from { transform: translateY(0); opacity: 1; }
+			to { transform: translateY(-2rem); opacity: 0; }
+		}
+	}
+
+	// When a "lower" screen (route) is entering (the higher is leaving)
+	&--leaving {
+		// The entering screen
+		> .screenAnimation-enter {
+			transform: translateY(-2rem);
+			opacity: 0;
+			z-index: 2;
+		}
+
+		> .screenAnimation-enter-active {
+			animation-name: lateralPush_leaving_enter;
+			animation-delay: 0.3s;
+			animation-duration: 0.5s;
+			animation-fill-mode: forwards;
+		}
+
+		@keyframes lateralPush_leaving_enter {
+			from { transform: translateY(-2rem); opacity: 0; }
+			to { transform: translateY(0); opacity: 1; }
+		}
+
+		// The leaving screen
+		> .screenAnimation-exit {
+			transform: translateY(0);
+			opacity: 1;
+			z-index: 1;
+		}
+
+		> .screenAnimation-exit-active {
+			animation-name: lateralPush_leaving_exit;
+			animation-duration: 0.5s;
+			animation-fill-mode: forwards;
+		}
+
+		@keyframes lateralPush_leaving_exit {
+			from { transform: translateY(0); opacity: 1; }
+			to { transform: translateY(2rem); opacity: 0; }
+		}
+	}
+}

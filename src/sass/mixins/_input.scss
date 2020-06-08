@@ -1,0 +1,19 @@
+@mixin input() {
+	-webkit-appearance: none;
+	width: 100%;
+	color: rgba($white, 0.75);
+	background-color: transparent;
+
+	border: 0.2rem solid $bg-card;
+	border-radius: 0.5rem;
+	padding: 1.5rem 2rem;
+
+	font-weight: 300;
+	font-size: 1.4rem;
+	line-height: 1.6rem;
+	letter-spacing: 0;
+
+	&::placeholder {
+		color: rgba($white, 0.5);
+	}
+}

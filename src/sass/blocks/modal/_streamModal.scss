@@ -1,0 +1,70 @@
+.streamModal {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	flex: 1;
+}
+
+.streamModal__body {
+	border-left: 3px solid $med-cyan;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.streamModal__streamInfo {
+	background-color: #12161A;
+}
+
+.streamModal__data {
+	text-align: right;
+	padding: 24px 16px;
+	border-bottom: 1px solid $med-cyan;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	@include icon($white);
+	font-size: 14px;
+	> .icon {
+		width: 21px;
+		margin-right: 8px;
+	}
+}
+
+.streamModal__content {
+	flex: 1;
+	display: flex;
+  flex-direction: column;
+}
+
+.streamModal__viewers {
+	margin: 23px 35px 0 23px;
+	flex-direction: column;
+}
+
+.streamModal__viewers-grid {
+	display: flex;
+	flex-wrap: wrap;
+	// margin-left: 18px;
+	margin-bottom: 40px;
+}
+
+.streamModal__viewer {
+	@include aspect-ratio();
+	width: calc(100%/6 - 18px);
+	margin-right: 18px;
+	margin-bottom: 18px;
+	height: 100%;
+}
+
+//Specificity to override the yellow bg of messages
+.streamModal .conversationMessage--mine .conversationMessage__content {
+	background: $light-cyan;
+	color: $white;
+	&:before {
+		border-color: $light-cyan transparent transparent transparent
+	}
+	.conversationMessage__datetime {
+		opacity: 0.3;
+	}
+}

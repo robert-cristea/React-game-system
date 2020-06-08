@@ -1,0 +1,63 @@
+.messageText {
+	&__content {
+		$br: 0.3rem;
+		$triangle-width: 1.7rem;
+		$triangle-height: 1.4rem;
+		position: relative;
+		min-width: 30rem;
+		color: rgba($white, 0.9);
+		padding: 1.1rem;
+		border-style: solid;
+
+		&:before {
+			content: '';
+			position: absolute;
+			width: 0;
+			height: 0;
+			top: 0;
+			transform: translateX(-100%);
+			border-width: 0 $triangle-width $triangle-height 0;
+			border-color: transparent $bg-card transparent transparent;
+			border-style: solid;
+		}
+
+		.messageText--their & {
+			background-color: $bg-card;
+			border-radius: 0 $br $br $br;
+
+			&:before {
+				left: 0.4rem;
+				transform: translateX(-100%);
+				border-width: 0 $triangle-width $triangle-height 0;
+				border-color: transparent $bg-card transparent transparent;
+			}
+		}
+
+		.messageText--mine & {
+			background-color: $bg-content;
+			border-radius: $br 0 $br $br;
+
+			&:before {
+				right: 0.4rem;
+				transform: translateX(100%);
+				border-width: $triangle-height $triangle-width 0 0;
+				border-color: $bg-content transparent transparent transparent;
+			}
+		}
+	}
+
+	&__text {
+		display: block;
+		line-height: 1.5em;
+		font-size: 1.4rem;
+		font-family: inherit;
+		white-space: pre-wrap;
+		font-weight: 300;
+	}
+
+	&__datetime {
+		margin-top: 1.6rem;
+		font-size: 1rem;
+		opacity: 0.5;
+	}
+}

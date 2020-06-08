@@ -1,0 +1,79 @@
+.confirmDialog {
+	z-index: 2;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: none;
+	align-items: center;
+	justify-content: center;
+
+	&--visible {
+		display: flex;
+	}
+
+	&__dialog {
+		width: 75rem;
+		background-color: $bg-content;
+		border-radius: 0.5rem;
+		padding: 6.2rem;
+		position: relative;
+	}
+
+	&__close {
+		position: absolute;
+		top: 2rem;
+		right: 2.6rem;
+		padding: 0;
+		z-index: 2;
+
+		.icon {
+			height: 1.4rem;
+
+			svg {
+				height: 100%;
+				fill: rgba($white, 0.5);
+			}
+		}
+	}
+
+	&__title {
+		font-size: 2.4rem;
+		text-transform: uppercase;
+		letter-spacing: 0.3rem;
+		font-weight: 500;
+		line-height: #{(33/24)};
+		text-align: center;
+		margin-bottom: 1.9rem;
+	}
+
+	&__message {
+		color: $white;
+		opacity: 0.5;
+		text-align: center;
+		font-size: 1.4rem;
+		font-weight: 300;
+		line-height: #{(19/14)};
+
+		p {
+			margin-bottom: 1rem;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__actions {
+		margin-top: 2.7rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__action {
+		margin: 0 0.9rem;
+	}
+}

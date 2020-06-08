@@ -1,0 +1,255 @@
+.orderDetails {
+	&__table {
+		width: 100%;
+		border-collapse: collapse;
+
+		&-cell {
+			border-bottom: 1px solid rgba($white, 0.1);
+			padding-bottom: 1rem;
+		}
+
+		&-title {
+			text-align: left;
+			font-weight: 700;
+			font-size: 1.4rem;
+			line-height: 1.9rem;
+			margin: 0;
+			text-transform: uppercase;
+
+			&--center {
+				text-align: center;
+			}
+		}
+
+		&-spacer {
+			height: 1rem;
+		}
+	}
+
+	&__item {
+		$item: &;
+
+		background: $bg-card;
+		padding-top: 1rem;
+
+		&-cell {
+			padding: 1rem 1.5rem;
+
+			#{$item}--disabled & {
+				opacity: 0.5;
+				pointer-events: none;
+			}
+		}
+
+		&-wrap {
+			display: flex;
+			align-items: center;
+			flex-wrap: nowrap;
+		}
+
+		&-cover {
+			flex-shrink: 0;
+			width: 3.5rem;
+			height: 3.5rem;
+			object-fit: cover;
+			margin-right: 1.5rem;
+		}
+
+		&-icon {
+			height: 2rem;
+			margin-right: 1.5rem;
+
+			svg {
+				height: 100%;
+				fill: $main;
+			}
+		}
+
+		&-name {
+			font-weight: 700;
+			font-size: 1.4rem;
+			line-height: 1.9rem;
+			margin: 0;
+		}
+
+		&-text {
+			font-weight: 300;
+			font-size: 1.4rem;
+			line-height: 1.9rem;
+			margin: 0;
+			margin-left: 1rem;
+			opacity: 0.5;
+		}
+
+		&-action {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: nowrap;
+		}
+
+		&-button {
+			background: transparent;
+			cursor: pointer;
+
+			.icon {
+				height: 2rem;
+
+				svg {
+					height: 100%;
+					fill: $main;
+
+					#{$item}--disabled & {
+						fill: $white;
+					}
+				}
+			}
+		}
+
+		&-price {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			overflow: hidden;
+
+			.icon {
+				height: 1.5rem;
+				margin-right: 1rem;
+				flex-shrink: 0;
+
+				svg {
+					height: 100%;
+					fill: $main;
+				}
+			}
+		}
+	}
+
+	&__amount {
+		overflow: hidden;
+
+		&-tokens {
+			font-weight: 700;
+			font-size: 1.4rem;
+			line-height: 1.9rem;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+
+		&-currency {
+			font-weight: 500;
+			font-size: 1rem;
+			line-height: 1.4rem;
+			color: rgba($white, 0.5);
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+	}
+
+	&__taxes {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 1.5rem 0;
+		border-bottom: 1px solid rgba($white, 0.1);
+
+		&-label {
+			font-weight: 300;
+			font-size: 1.4rem;
+			line-height: 1.9rem;
+			margin: 0;
+			opacity: 0.5;
+
+			& + & {
+				margin-left: 1rem;
+			}
+		}
+	}
+
+	&__amountRow {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: nowrap;
+		overflow: hidden;
+		padding: 1.5rem 0;
+
+		&:last-child {
+			padding-bottom: 0;
+		}
+
+		&-title {
+			font-weight: 500;
+			font-size: 1.6rem;
+			line-height: 2.2rem;
+			text-transform: uppercase;
+			overflow: hidden;
+			opacity: 0.5;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			text-align: right;
+			letter-spacing: 0.2rem;
+		}
+	}
+
+	&__price {
+		$current: &;
+		display: flex;
+		align-items: center;
+		flex-wrap: nowrap;
+		overflow: hidden;
+		margin-left: 1rem;
+
+		.icon {
+			height: 2.8rem;
+			margin-right: 1rem;
+			flex-shrink: 0;
+
+			svg {
+				height: 100%;
+				fill: $main;
+			}
+		}
+
+		&--large {
+			.icon {
+				height: 3.6rem;
+			}
+		}
+
+		&--small {
+			.icon {
+				height: 1.5rem;
+			}
+		}
+
+		&-tokens {
+			font-weight: 700;
+			font-size: 2.9rem;
+			line-height: #{(3.2/2.9)};
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+
+			#{$current}--small & {
+				font-size: 1.6rem;
+			}
+		}
+
+		&-currency {
+			font-weight: 500;
+			font-size: 1.2rem;
+			line-height: 1.6rem;
+			color: rgba($white, 0.5);
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+
+			&--right {
+				text-align: right;
+			}
+		}
+	}
+}

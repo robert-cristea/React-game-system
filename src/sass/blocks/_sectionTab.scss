@@ -1,0 +1,33 @@
+.sectionTab {
+	color: rgba($white, 0.5);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 8rem;
+	font-size: 1rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	cursor: pointer;
+
+	.icon {
+		height: 2rem;
+		margin-bottom: 0.5rem;
+
+		svg {
+			height: 100%;
+			fill: rgba($white, 0.5);
+		}
+	}
+
+	&--active {
+		background: $main;
+		color: $black;
+
+		.icon {
+			svg {
+				fill: $black;
+			}
+		}
+	}
+}

@@ -1,0 +1,69 @@
+.launchGame {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	background: $true-black;
+
+	&__loading {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+	}
+
+	&__image {
+		@include aspect-ratio(2, 1, 'img');
+
+		flex-grow: 1;
+		overflow: hidden;
+
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			z-index: 2;
+			box-shadow: inset 0px -200px 150px -100px $true-black;
+		}
+
+		img {
+			z-index: 1;
+		}
+	}
+
+	&__progress {
+		padding: $page-padding;
+		text-align: center;
+
+		.progressBar {
+			&__text {
+				font-size: 2.2rem;
+				font-weight: 700;
+				line-height: 3rem;
+				letter-spacing: 0.2rem;
+				color: rgba($white, 0.7);
+			}
+
+			&__meter {
+				$mask: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='18' viewBox='0 0 25 18'%3E%3Crect width='18' height='18' fill='%23212121' fill-rule='evenodd' rx='9'/%3E%3C/svg%3E%0A";
+
+				height: 1.8rem;
+				max-width: 35rem;
+				background: rgba($white, 0.15);
+				-webkit-mask-image: url($mask);
+				mask-image: url($mask);
+				-webkit-mask-repeat: repeat-x;
+				mask-repeat: repeat-x;
+			}
+		}
+	}
+
+	&__button {
+		margin-top: 2.5rem;
+		font-weight: 300;
+	}
+}

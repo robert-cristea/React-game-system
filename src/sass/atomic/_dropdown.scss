@@ -1,0 +1,57 @@
+.dropdown {
+	position: absolute;
+	bottom: 0;
+	transform: translateY(100%);
+	min-width: 20rem;
+
+	&--main {
+		bottom: -1rem;
+		padding: 1.5rem 2rem;
+		background: $bg-card;
+		border-radius: 0.5rem;
+		border: 0.1rem solid $border-light;
+		box-shadow: 2px -2px 10px $black;
+		display: flex;
+		flex-direction: column;
+		will-change: opacity, transition;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			transform: translateY(-100%);
+			border: 1rem solid transparent;
+			border-bottom-color: $border-light;
+		}
+	}
+
+	&__button {
+		background: transparent;
+	}
+
+	&--left {
+		left: 0;
+
+		&::after {
+			left: 1.5rem;
+		}
+	}
+
+	&--right {
+		right: 0;
+
+		&::after {
+			right: 1.5rem;
+		}
+	}
+
+	&--center {
+		left: 50%;
+		transform: translate(-50%, 100%);
+
+		&::after {
+			left: 50%;
+			transform: translate(-50%, -100%);
+		}
+	}
+}

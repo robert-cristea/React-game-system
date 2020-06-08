@@ -1,0 +1,39 @@
+.progressBar {
+	$self: &;
+
+	width: 100%;
+	overflow: hidden;
+
+	&--cover {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-items: flex-end;
+	}
+
+	&__meter {
+		width: 100%;
+		height: 1.5rem;
+
+		&::-webkit-meter-bar {
+			background: transparent;
+		}
+
+		&::-webkit-meter-optimum-value {
+			background: $main;
+		}
+	}
+
+	&__text {
+		font-weight: 300;
+		font-size: 1.6rem;
+		line-height: 2.2rem;
+		text-align: center;
+		margin: 2rem 0;
+		padding: 0 2rem;
+
+		#{$self}--cover & {
+			margin: auto 0;
+		}
+	}
+}

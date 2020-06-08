@@ -1,0 +1,140 @@
+.select {
+	$self: &;
+	position: relative;
+	width: 100%;
+
+	select {
+		@include input;
+	}
+
+	&--empty {
+		select {
+			color: rgba($white, 0.5);
+		}
+	}
+
+	.icon {
+		height: 1.6rem;
+		position: absolute;
+		right: 2rem;
+		top: 50%;
+		transform: translateY(-50%);
+		pointer-events: none;
+
+		svg {
+			height: 100%;
+			fill: $white;
+		}
+	}
+
+	&:not(:last-child) {
+		margin-bottom: 2rem;
+	}
+
+	&-react {
+		@mixin input-text() {
+			color: rgba($white, 0.75) !important;
+			font-weight: 300 !important;
+			font-size: 1.4rem !important;
+			line-height: 1.6rem !important;
+			letter-spacing: 0 !important;
+		}
+
+		&__control {
+			background-color: transparent !important;
+			border: 0.2rem solid $bg-card !important;
+			border-radius: 0.5rem !important;
+			padding: 1.5rem 2rem !important;
+			box-shadow: none !important;
+			cursor: text !important;
+
+			#{$self}-react--narrow & {
+				padding-right: 0.5rem !important;
+				padding-left: 1.2rem !important;
+			}
+
+			.input--error & {
+				border-color: $accent !important;
+			}
+		}
+
+		&__value-container {
+			padding: 0 !important;
+
+			& div {
+				line-height: 1.6rem !important;
+				font-size: 1.4rem !important;
+				margin: 0 !important;
+				padding: 0 !important;
+			}
+		}
+
+		&__input {
+			& input {
+				@include input-text();
+
+				margin: 0 !important;
+			}
+		}
+
+		&__indicator {
+			padding: 0 !important;
+
+			&-separator {
+				display: none !important;
+			}
+
+			& svg {
+				height: 1.6rem;
+				color: $white;
+			}
+		}
+
+		&__placeholder,
+		&__single-value {
+			@include input-text();
+
+			margin: 0 !important;
+		}
+
+		&__placeholder {
+			color: rgba($white, 0.5) !important;
+		}
+
+		&__menu {
+			margin: 1rem 0 !important;
+			border-radius: 0.5rem !important;
+			border: 0.2rem solid $border-light !important;
+			background: transparent !important;
+			z-index: 10 !important;
+
+			&-list {
+				padding: 1rem 0 !important;
+				border-radius: 0.5rem !important;
+				background: $bg-content !important;
+			}
+
+			&-notice {
+				@include input-text();
+
+				padding: 1rem 2rem !important;
+			}
+		}
+
+		&__option {
+			@include input-text();
+
+			padding: 1rem 2rem !important;
+			cursor: pointer !important;
+
+			&:hover,
+			&--is-focused {
+				background: $border !important;
+			}
+
+			&--is-selected {
+				background: $bg-page !important;
+			}
+		}
+	}
+}

@@ -1,0 +1,23 @@
+.tabs {
+  display: flex;
+  border-radius: 999px;
+  overflow: hidden;
+  margin: 36px 13px 0;
+  font-weight: 700;
+  font-size: 9px;
+  letter-spacing: $letter-spacing;
+  text-transform: uppercase;
+  &__item {
+    $height: 40px;
+    flex: 1;
+    text-align: center;
+    line-height: $height;
+    height: $height;
+    color: $med-cyan-text;
+    background-color: $med-cyan;
+    &--active {
+      color: $dark-yellow;
+      background-color: $yellow;
+    }
+  }
+}

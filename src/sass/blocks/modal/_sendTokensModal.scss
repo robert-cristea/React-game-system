@@ -1,0 +1,326 @@
+// If modifying the transition durations, do not forget to also update the closeTimeoutMS prop in
+// <PanelModal> (for the closing animation only)
+
+.sendTokensModal__overlay {
+	opacity: 0;
+	transition: opacity 0.2s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 3rem;
+	overflow-y: scroll;
+
+	// The following class name cannot be changed
+	&.ReactModal__Overlay--after-open {
+		opacity: 1;
+	}
+
+	&.ReactModal__Overlay--before-close {
+		opacity: 0;
+	}
+}
+
+.sendTokensModal {
+	width: 40rem;
+	margin: 0 auto;
+	box-sizing: content-box;
+	padding: 0 2rem;
+
+	&__close {
+		position: absolute;
+		top: 2rem;
+		right: 2.6rem;
+		padding: 0;
+		z-index: 2;
+
+		.icon {
+			height: 1.4rem;
+
+			svg {
+				height: 100%;
+				fill: rgba($white, 0.5);
+			}
+		}
+	}
+
+	&__message {
+		text-align: center;
+		font-size: 1.8rem;
+		margin-bottom: 4rem;
+	}
+
+	&__content {
+		position: relative;
+		width: 76.3rem;
+		background-color: $bg-content;
+		box-shadow: 3px -2px 4px 0 rgba(0, 0, 0, 0.5);
+		border-radius: 1rem;
+		padding: 4.5rem 6.5rem;
+		display: flex;
+		flex-direction: column;
+		max-height: 100%;
+		overflow-y: auto;
+	}
+
+	&__header {
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	&__title {
+		font-weight: 500;
+		font-size: 2.4rem;
+		line-height: 3.2rem;
+		letter-spacing: 0.3rem;
+		text-transform: uppercase;
+		margin-bottom: 0.8rem;
+	}
+
+	&__subTitle {
+		font-size: 1.1rem;
+		color: $white;
+		opacity: 0.5;
+		font-weight: 300;
+		line-height: #{(15/11)};
+	}
+
+	&__balance {
+		background-color: $bg-card;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 7.5rem;
+		margin: 4.4rem 0;
+		font-size: 1.8rem;
+		font-weight: 700;
+		line-height: 2.5rem;
+		padding: 0 2.1rem;
+	}
+
+	&__balanceLabel {
+		display: flex;
+		align-items: center;
+
+		.icon {
+			height: 2rem;
+			margin-right: 1rem;
+			margin-left: auto;
+			flex-shrink: 0;
+
+			svg {
+				height: 100%;
+				fill: $main;
+			}
+		}
+	}
+
+	&__balanceAmount {
+		font-size: 1.8rem;
+		font-weight: 700;
+		line-height: 2.5rem;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+
+	&__field {
+		margin-bottom: 2.1rem;
+	}
+
+	&__label {
+		font-weight: 500;
+		font-size: 1.6rem;
+		letter-spacing: 0.2rem;
+		text-transform: uppercase;
+		margin-bottom: 0.8rem;
+
+		&--nowrap {
+			white-space: nowrap;
+		}
+
+		&--info {
+			display: flex;
+			text-transform: none;
+
+			.icon {
+				height: 1.6rem;
+				margin-left: 0.5rem;
+				cursor: pointer;
+			}
+
+			svg {
+				fill: $white;
+				height: 100%;
+			}
+		}
+	}
+
+	&__labelOptional {
+		text-transform: none;
+		font-size: 1.1rem;
+	}
+
+	&__paymentMethodsLoading {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__amountSelector {
+		display: flex;
+		justify-content: space-between;
+		margin: 1.4rem 0;
+	}
+
+	&__amountButton {
+		cursor: pointer;
+		font-weight: 900;
+		font-size: 1.8rem;
+		border-radius: 1rem;
+		background-color: $bg-card;
+		padding: 1.3rem 1.7rem 1.1rem;
+		border: 1px solid $border;
+		transition: border-radius 0.2s;
+
+		&:hover {
+			border-color: $main;
+		}
+
+		&--active {
+			border-color: $main;
+		}
+
+		&--disabled {
+			color: rgba($white, 0.3);
+			cursor: default;
+
+			&:hover {
+				border-color: $border;
+			}
+		}
+	}
+
+	&__selectedAmount {
+		background-color: $bg-card;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0 2rem;
+		margin: 2.1rem 0;
+		height: 7.6rem;
+
+		.icon {
+			height: 2.5rem;
+			margin-right: 0.9rem;
+			flex-shrink: 0;
+
+			svg {
+				height: 100%;
+				fill: $main;
+			}
+		}
+
+		&-amounts {
+			text-align: center;
+		}
+
+		&-tokens {
+			font-size: 2.9rem;
+			font-weight: 700;
+			line-height: 4rem;
+			overflow: hidden;
+		}
+
+		&-currency {
+			font-size: 1.2rem;
+			font-weight: 500;
+			line-height: 1.5rem;
+			color: rgba($white, 0.5);
+		}
+	}
+
+	&__addCCOption {
+		display: flex;
+		align-items: center;
+
+		.icon {
+			height: 1.6rem;
+			margin-right: 1rem !important;
+			display: inline-block;
+
+			svg {
+				height: 100%;
+				fill: $silver;
+			}
+		}
+	}
+
+	&__actions {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__action {
+		flex: 1;
+		margin-bottom: 1.6rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__paymentMethods {
+		display: flex;
+		align-items: center;
+	}
+
+	&__paymentMethod {
+		display: flex;
+		align-items: center;
+		margin-right: 1.5rem;
+
+		.icon {
+			height: 3rem;
+
+			svg {
+				height: 100%;
+			}
+		}
+	}
+
+	&__encription {
+		display: flex;
+		align-items: center;
+
+		&-icon {
+			position: relative;
+			margin: 0 1rem;
+
+			.icon {
+				height: 2rem;
+
+				svg {
+					height: 100%;
+					fill: $white;
+				}
+			}
+		}
+
+		&-overlay {
+			position: absolute;
+			width: 100%;
+			top: 45%;
+			text-align: center;
+			font-size: 7px;
+			line-height: 1rem;
+			font-weight: 700;
+			color: $bg-content;
+		}
+
+		&-text {
+			font-size: 1.4rem;
+			line-height: 1.9rem;
+			font-weight: 300;
+			margin: 0;
+		}
+	}
+}

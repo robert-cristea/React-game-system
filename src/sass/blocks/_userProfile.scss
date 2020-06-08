@@ -1,0 +1,7 @@
+.userProfile {
+  display: flex;
+  flex: 1 1 0;
+  &__sidebar {
+    flex: 0 0 375px;
+  }
+}

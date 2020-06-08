@@ -1,0 +1,12 @@
+.streams {
+	$self: &;
+
+	@include scroll-hide('v');
+
+	overflow-y: auto;
+	padding: $page-padding;
+
+	& .sectionTabs {
+		padding: 0 $page-padding;
+	}
+}

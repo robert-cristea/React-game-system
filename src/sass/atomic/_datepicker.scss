@@ -1,0 +1,159 @@
+/**
+ * Styles for https://reactdatepicker.com/
+ */
+@import '~react-datepicker/dist/react-datepicker.css';
+
+.datepicker {
+	.react-datepicker {
+		padding: 0;
+		background: $bg-page !important;
+		border-radius: 0.5rem;
+		border: 0.2rem solid $border-light;
+		box-shadow: 2px -2px 10px $black;
+		will-change: opacity, transition;
+
+		font-family: $font-main !important;
+		font-weight: 500 !important;
+		font-size: 1.4rem !important;
+		line-height: 1.4rem !important;
+		letter-spacing: 0 !important;
+		color: $white !important;
+
+		&__triangle {
+			border-bottom-color: $border-light !important;
+
+			&::before {
+				display: none !important;
+			}
+		}
+
+		&__navigation {
+			top: 2rem !important;
+
+			&--previous {
+				border-right-color: rgba($white, 0.3);
+
+				&--disabled {
+					display: none;
+				}
+			}
+
+			&--next {
+				border-left-color: rgba($white, 0.3);
+
+				&--disabled {
+					display: none;
+				}
+			}
+		}
+
+		&-wrapper,
+		&__input-container {
+			width: 100%;
+		}
+
+		&__header {
+			background: $bg-content !important;
+			padding-top: 1rem;
+			border-bottom: 0.2rem solid $border-light;
+
+			&__dropdown {
+				margin: 1.5rem 0;
+			}
+		}
+
+		&__current-month {
+			color: $white;
+			font-weight: 700 !important;
+			font-size: 1.4rem !important;
+			line-height: 3rem !important;
+		}
+
+		&__month-read-view,
+		&__year-read-view {
+			color: $white !important;
+			font-weight: 300 !important;
+			position: relative !important;
+			margin: 0 !important;
+			border: none !important;
+			padding-right: 2rem !important;
+
+			&--down-arrow {
+				float: none !important;
+				border-top-color: rgba($white, 0.3) !important;
+				border-width: 0.3rem !important;
+				position: absolute !important;
+				right: 0.5rem !important;
+				top: 50% !important;
+				transform: translateY(-50%);
+
+				&::before {
+					display: none !important;
+				}
+			}
+		}
+
+		&__month-read-view {
+			margin-right: 2rem !important;
+		}
+
+		&__month-dropdown,
+		&__year-dropdown {
+			background: $bg-page !important;
+			border-radius: 0.5rem;
+			border: 0.1rem solid $border-light;
+		}
+
+		&__month-option,
+		&__year-option {
+			line-height: 2.5rem;
+
+			&:hover {
+				background: rgba($white, 0.2);
+			}
+		}
+
+		&__day-name {
+			color: rgba($white, 0.5) !important;
+			width: 3.5rem !important;
+		}
+
+		&__month {
+			margin: 1rem !important;
+		}
+
+		&__day {
+			border-radius: 0.5rem !important;
+			width: 3.5rem !important;
+			margin: 0.2rem;
+
+			font-weight: 500 !important;
+			font-size: 1.4rem !important;
+			line-height: 3.5rem !important;
+			letter-spacing: 0 !important;
+			color: $white;
+
+			&:hover {
+				background: rgba($white, 0.2);
+			}
+
+			&--disabled {
+				color: rgba($white, 0.5);
+
+				&:hover {
+					background: transparent;
+				}
+			}
+
+			&--selected {
+				color: $bg-page;
+				background: $main;
+				font-weight: 900 !important;
+
+				&:hover {
+					background: $main;
+				}
+			}
+		}
+	}
+}

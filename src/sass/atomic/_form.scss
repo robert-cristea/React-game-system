@@ -1,0 +1,46 @@
+.form {
+	&__error {
+		position: absolute;
+		transform: translateY(-1.2rem);
+		left: 1rem;
+		right: 1rem;
+		padding: 0 1rem;
+
+		color: $white;
+		background: $bg-page;
+		border: 0.2rem solid $accent;
+		border-top: 0;
+		border-bottom: 0;
+		border-radius: 1.2rem;
+		max-width: 25rem;
+		width: min-content;
+
+		font-size: 1rem;
+		font-weight: 300;
+		line-height: 2rem;
+		letter-spacing: 0.1rem;
+
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+
+  &__message {
+		margin-top: 1rem;
+		margin-bottom: 2rem;
+		text-align: left;
+		font-size: 1.2rem;
+		font-weight: 300;
+		line-height: 1.8rem;
+		letter-spacing: 0.1rem;
+		color: $white;
+
+		&--error {
+			color: $accent;
+		}
+
+		&--success {
+			color: $online;
+		}
+	}
+}

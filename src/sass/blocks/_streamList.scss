@@ -1,0 +1,73 @@
+.streamList {
+  $grid-gap: 22px;
+
+  padding: 0 $page-padding;
+  width: 100%;
+  overflow: hidden;
+
+  &__container {
+    margin: 0 -#{$page-padding};
+
+    &:not(:last-child) {
+      padding-bottom: 4rem;
+    }
+  }
+
+  &__title {
+    font-family: 'Avenir';
+    display: flex;
+    align-items: center;
+    padding-bottom: 35px;
+    @include icon($yellow);
+    h2 {
+      font-size: 24px;
+      font-weight: 300;
+    }
+    > .icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 2px solid $yellow;
+      margin-right: 20px;
+      // For centering the icon in the circle
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg {
+        height: 16px;
+      }
+    }
+  }
+  &__row {
+    $gutter: 1rem;
+
+    margin: 0 -#{$page-padding};
+
+    .slick-list {
+      margin: 0 calc(#{$page-padding} - #{$gutter});
+    }
+
+    .slick-slide {
+      padding: 0 $gutter;
+    }
+
+    .slick-track {
+      margin-left: 0;
+    }
+  }
+  &__grid {
+    padding-right: 14px;
+  }
+  &__gridContainer {
+    $nb-cols: 3;
+    margin-right: -$grid-gap;
+    display: flex;
+    flex-wrap: wrap;
+    .streamList__item {
+      flex: 0 0 calc(#{100% / $nb-cols} - #{$grid-gap});
+      margin: 0 $grid-gap $grid-gap 0;
+    }
+  }
+}
+
+// Classes for swiper lib

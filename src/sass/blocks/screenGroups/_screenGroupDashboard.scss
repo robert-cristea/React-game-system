@@ -1,0 +1,37 @@
+.screenGroupDashboard {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	background: $bg-page;
+
+	&__main {
+		flex: 1;
+		display: flex;
+	}
+
+	&__content {
+		flex: 1;
+		display: flex;
+		z-index: 1;
+	}
+
+	&__header {
+		position: relative;
+		z-index: 2;
+	}
+
+	&__modal0 {
+		position: relative;
+		z-index: 3;
+	}
+
+	&__modal1 {
+		position: relative;
+		z-index: 4;
+	}
+
+	&__sendTokensModal {
+		position: relative;
+		z-index: 5;
+	}
+}

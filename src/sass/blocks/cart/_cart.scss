@@ -1,0 +1,94 @@
+.cart {
+	@include scroll-hide('v');
+
+	background: $bg-content;
+	padding: 1.5rem 2rem;
+	width: 45rem;
+	max-height: calc(100vh - 10rem);
+	overflow-y: auto;
+	box-shadow: 10px 10px 30px rgba($black, 0.7);
+
+	.tokenBalance {
+		margin-bottom: 2rem;
+	}
+
+	&__empty {
+		text-align: center;
+		font-size: 1.4rem;
+		font-weight: 300;
+		line-height: 2rem;
+		color: rgba($white, 0.5);
+		margin: 1.5rem 0;
+	}
+
+	&__loading {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__total {
+		display: flex;
+		align-items: center;
+		overflow: hidden;
+		padding: 2rem 0;
+
+		&-text {
+			font-size: 1.6rem;
+			font-weight: 500;
+			line-height: 2.2rem;
+			color: rgba($white, 0.5);
+			margin-right: 1rem;
+			flex-shrink: 0;
+		}
+
+		.icon {
+			height: 2.8rem;
+			margin-right: 1rem;
+			margin-left: auto;
+			flex-shrink: 0;
+
+			svg {
+				height: 100%;
+				fill: $main;
+			}
+		}
+	}
+
+	&__amount {
+		overflow: hidden;
+
+
+		&-tokens {
+			font-size: 3.2rem;
+			font-weight: 700;
+			line-height: 4.4rem;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+
+		&-currency {
+			font-size: 1.2rem;
+			font-weight: 500;
+			line-height: 1.5rem;
+			color: rgba($white, 0.5);
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+	}
+
+	&__disclaimer {
+		text-align: center;
+		font-size: 1.1rem;
+		font-weight: 300;
+		line-height: 1.5rem;
+		color: rgba($white, 0.5);
+		padding: 2rem 3rem;
+		border-top: 0.1rem solid rgba($white, 0.1);
+	}
+
+	&__cta {
+		margin-bottom: 1.5rem;
+	}
+}

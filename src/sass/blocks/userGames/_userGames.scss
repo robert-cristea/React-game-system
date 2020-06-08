@@ -1,0 +1,78 @@
+.userGames {
+	$self: &;
+
+	@include scroll-hide('v');
+
+	overflow-y: auto;
+	padding: $page-padding;
+	min-height: 100%;
+
+	&__loading {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%);
+	}
+
+	&__header {
+		display: flex;
+		margin-top: 0;
+		margin-bottom: 2rem;
+
+		& > .icon {
+			height: 2.6rem;
+			margin-right: 1rem;
+
+			svg {
+				height: 100%;
+				fill: $main;
+			}
+		}
+	}
+
+	&__filters {
+		display: flex;
+		margin-bottom: 3rem;
+	}
+
+	&__category {
+		position: relative;
+		margin-right: 1rem;
+		min-width: 26rem;
+
+		&.select {
+			margin-bottom: 0;
+			width: auto;
+		}
+	}
+
+	&__title {
+		font-weight: 500;
+		font-size: 2.4rem;
+		line-height: 3.2rem;
+		letter-spacing: 0.3rem;
+		margin: 0;
+	}
+
+	&__toggle {
+		padding: 0;
+		opacity: 0.5;
+
+		&--active {
+			opacity: 1;
+		}
+
+		&-wrap {
+			margin-left: auto;
+		}
+
+		.icon {
+			height: 1.6rem;
+
+			svg {
+				height: 100%;
+				fill: $white;
+			}
+		}
+	}
+}

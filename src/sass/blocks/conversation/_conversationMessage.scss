@@ -1,0 +1,80 @@
+.conversationMessage {
+	display: flex;
+
+	&--mine {
+		flex-direction: row-reverse;
+	}
+
+	&__content {
+		max-width: calc(45% - 5.8rem);
+		position: relative;
+	}
+
+	&__avatar {
+		flex: 0 0 4.3rem;
+		height: 4.3rem;
+
+		.conversationMessage--their & {
+			margin-right: 1.5rem;
+		}
+
+		.conversationMessage--mine & {
+			margin-left: 1.5rem;
+		}
+	}
+
+	&__addReaction {
+		position: absolute;
+		top: 0.1rem;
+		cursor: pointer;
+
+		.conversationMessage--their & {
+			right: -2.2rem;
+		}
+
+		.conversationMessage--mine & {
+			left: -2.2rem;
+		}
+
+		&:hover {
+			.icon svg {
+				fill: $main;
+			}
+		}
+
+		.icon {
+			width: 1.6rem;
+			height: 1.6rem;
+
+			svg {
+				width: 100%;
+				fill: $light-grey;
+			}
+		}
+	}
+
+	&__reactions {
+		display: flex;
+		justify-content: flex-end;
+		position: relative;
+		margin-top: -13px;
+		padding: 0 3px;
+		z-index: 2;
+
+		.conversationMessage--their & {
+		}
+	}
+
+	&__reaction {
+		font-size: 16px;
+		width: 27px;
+		height: 27px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		border: 1px solid $bg-content;
+		background-color: $bg-page;
+		margin: 0 2px;
+	}
+}

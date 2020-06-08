@@ -1,0 +1,139 @@
+.stream {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  background-color: $off-black;
+  &__header {
+    transition: margin-top 0.3s;
+    .stream--fullscreen & {
+      margin-top: -67px;
+    }
+  }
+  &__main {
+    position: relative;
+    flex: 1;
+    // Fix for Chromium object-fit
+    overflow: hidden;
+  }
+  &__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__status {
+    position: absolute;
+		top: 25px;
+    left: 15px;
+    border-radius: 3px;
+    background-color: $live;
+    padding: 4px 14px 3px 9px;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    @include icon($white);
+    > .icon {
+      margin-right: 6px;
+      height: 13px; 
+      svg {
+        height: 10px;
+      }
+    }
+  }
+  &__toolbar {
+    position: absolute;
+    top: 25px;
+    right: 15px;
+  }
+  &__tool {
+    @include icon($white);
+    margin-bottom: 10px;
+    > .icon {
+      width: 37px;
+      height: 37px;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg {
+        width: 16px;
+      }
+    }
+  }
+  &__gameTag {
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    &-overlay {
+      display: flex;
+      width: 65%;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px;
+      border-radius: 4px;
+      background-color: rgba(0,0,0,0.5);
+    }
+    &-thumbnail {
+      border-radius: 5px;
+      width: 43px;
+      height: 43px;
+      margin-right: 20px;
+      object-fit: cover;
+      object-position: top;
+    }
+    &-publisher {
+      font-size: 12px;
+      opacity: 0.5;
+      margin-top: 4px;
+    }
+    &-close {
+      @include icon($white);
+      cursor: pointer;
+      margin-left: auto;
+      > .icon {
+        width: 16px;
+      }
+    }
+  }
+  &__meta {
+    height: 92px;
+    transition: margin-bottom 0.3s;
+    display: flex;
+    padding: 24px 16px;
+    .stream--fullscreen & {
+      margin-bottom: -92px;
+    }
+    .avatar {
+      height: 43px;
+      width: 43px;
+      border-radius: 50%;
+      margin-right: 12px;
+      flex-shrink: 0;
+    }
+    &-details {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    &-title {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+    &-username {
+      font-size: 12px;
+      opacity: 0.5;
+    }
+  }
+}

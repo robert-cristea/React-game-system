@@ -1,0 +1,39 @@
+// If modifying the transition durations, do not forget to also update the closeTimeoutMS prop in
+// <PanelModal> (for the closing animation only)
+
+.panelModal__overlay {
+	opacity: 0;
+	transition: opacity 0.1s;
+	transform: translate3d(0, 0, 0);
+
+	// The following class name cannot be changed
+	&.ReactModal__Overlay--after-open {
+		opacity: 1;
+	}
+
+	&.ReactModal__Overlay--before-close {
+		opacity: 0;
+	}
+}
+
+.panelModal__content {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 63%;
+	background-color: $dark-cyan;
+	transition: all 0.5s;
+	transform: translateX(50%);
+	opacity: 0.5;
+
+	// The following class name cannot be changed
+	&.ReactModal__Content--after-open {
+		transform: translateX(0);
+		opacity: 1;
+	}
+
+	&.ReactModal__Content--before-close {
+		transform: translateX(50%);
+	}
+}

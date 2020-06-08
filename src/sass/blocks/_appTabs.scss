@@ -1,0 +1,10 @@
+.appTabs {
+	background-color: $dark-grey;
+	display: flex;
+	justify-content: space-around;
+	padding: 0 $app-side-padding;
+}
+
+.appTabs__tab {
+	flex: 1;
+}

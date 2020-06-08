@@ -1,0 +1,32 @@
+// If modifying the transition durations, do not forget to also update the closeTimeoutMS prop in
+// <FullModal> (for the closing animation only)
+
+.fullModal__overlay {
+	opacity: 0;
+	transition: opacity 0.3s ease;
+
+	// The following class name cannot be changed
+	&.ReactModal__Overlay--after-open {
+		opacity: 1;
+	}
+
+	&.ReactModal__Overlay--before-close {
+		opacity: 0;
+	}
+}
+
+.fullModal__content {
+	height: 100%;
+	transform: translateY(50%);
+	background-color: $bg-page;
+	transition: transform 0.3s ease;
+
+	// The following class name cannot be changed
+	&.ReactModal__Content--after-open {
+		transform: translateY(0);
+	}
+
+	&.ReactModal__Content--before-close {
+		transform: translateY(50%);
+	}
+}

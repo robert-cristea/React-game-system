@@ -1,0 +1,10 @@
+.sectionTabs {
+	background-color: $bg-card;
+	display: flex;
+	justify-content: space-around;
+	padding: 0 2rem;
+
+	&__tab {
+		flex-grow: 1;
+	}
+}

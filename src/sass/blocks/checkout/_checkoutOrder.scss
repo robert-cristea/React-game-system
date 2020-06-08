@@ -1,0 +1,35 @@
+.checkoutOrder {
+	&__header {
+		text-align: center;
+		border-bottom: 1px solid rgba($white, 0.1);
+		padding-bottom: 2.3rem;
+		margin-bottom: 4rem;
+	}
+
+	&__title {
+		font-weight: 500;
+		letter-spacing: 0.3rem;
+		font-size: 3.2rem;
+		text-transform: uppercase;
+	}
+
+	&__headerIcon {
+		height: 6rem;
+		width: 6rem;
+		display: inline-block;
+		justify-content: center;
+		margin-bottom: 4rem;
+
+		svg {
+			height: 100%;
+			fill: $accept;
+		}
+	}
+
+	&__actions {
+		.btn {
+			width: 100%;
+			margin-top: 4rem;
+		}
+	}
+}

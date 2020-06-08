@@ -1,0 +1,17 @@
+.conversationFileUploads {
+	padding: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: -10px;
+
+	&__item {
+		margin-right: 10px;
+		margin-bottom: 10px;
+		flex: 0 0 250px;
+		overflow: hidden;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}

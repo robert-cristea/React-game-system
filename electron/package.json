@@ -1,0 +1,11 @@
+{
+	"name": "turboplay",
+	"version": "0.1.0",
+	"main": "electron.js",
+	"scripts": {
+		"start": "electron ."
+	},
+	"dependencies": {
+		"open": "^0.0.5"
+	}
+}
