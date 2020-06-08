@@ -17,11 +17,11 @@ The App ("app") consists of the following core components:
 
 ## Alpha Interface
 
-`![Interface](https://github.com/robert-upwork/React-game-site/blob/master/src/assets/images/pages/1.PNG)`
+![Interface](https://github.com/robert-upwork/React-game-site/blob/master/src/assets/images/pages/1.PNG)
 
-`![Interface](https://github.com/robert-upwork/React-game-site/blob/master/src/assets/images/pages/3.PNG)`
+![Interface](https://github.com/robert-upwork/React-game-site/blob/master/src/assets/images/pages/3.PNG)
 
-`![Interface](https://github.com/robert-upwork/React-game-site/blob/master/src/assets/images/pages/4.PNG)`
+![Interface](https://github.com/robert-upwork/React-game-site/blob/master/src/assets/images/pages/4.PNG)
 
 # Limited Online Demo
 
