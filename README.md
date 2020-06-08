@@ -23,10 +23,6 @@ The App ("app") consists of the following core components:
 
 ![Interface](https://github.com/robert-upwork/React-game-site/blob/master/src/assets/images/pages/4.PNG)
 
-# Limited Online Demo
-
-[Demo](http://demo.turboplay.com)
-
 # Technology Stack
 
 The technology stack includes the following:
