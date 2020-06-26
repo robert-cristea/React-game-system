@@ -51,6 +51,7 @@ Decentralized
 * Peer Swarm (DHT based Game Related Data)
 * IPFS Filesystem (Store Images, Avatars, Game Packages)
 
+
 Databases
 
 * Apache Cassandra (Players, Achievements, Stats)
