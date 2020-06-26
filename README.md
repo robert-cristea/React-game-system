@@ -2,8 +2,6 @@
 
 ElectronJS, React based Frontend
 
-This source code is released under the Apache2 license. We will update this source code when we see fit.
-
 # App
 
 The App ("app") consists of the following core components:
